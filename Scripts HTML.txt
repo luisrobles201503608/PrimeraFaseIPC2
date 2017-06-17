@@ -1,0 +1,265 @@
+INICIO
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="Banquetzal.Master1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BanQuetzal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.cycle.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('#featured_slide').after('<div id="fsn"><ul id="fs_pagination">').cycle({
+        timeout: 5000,
+        fx: 'fade',
+        pager: '#fs_pagination',
+        pause: 1,
+        pauseOnPagerHover: 0
+    });
+});
+</script>
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+<div class="wrapper col0">
+</div>
+<!-- ###################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="topnav">
+      <ul>
+        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">cuenta</a>
+          <ul class="dropdown-menu">
+                            <li><a href="#">Crear</a></li>
+                            <li><a href="#">Eliminar</a></li>
+                            <li><a href="#">Estado</a></li>
+                            <li><a href="#">Prestamo</a></li>
+                            <li><a href="#">Estado Prestamo</a></li>
+                            <li><a href="#">Transferencia</a></li>
+                            <li><a href="#">Transferencia a Terceros</a></li>
+                        </ul>
+              </li>
+        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<i class="icon-angle-down"></i></a>
+          <ul class="dropdown-menu">
+                            <li><a href="CrearU.aspx">Crear</a></li>
+                            <li><a href="ModificarU.aspx">Modificar</a></li>
+                        </ul>
+              </li>
+          <li class="active"><a href="Inicio.aspx">Inicio</a></li>
+      </ul>
+    </div>
+    <div id="logo">
+      <h1><a href="Inicio.aspx"><strong>BanQuetzal</strong></a></h1>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<!-- ####################################################################################################### -->
+<div class="midpro">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</div>
+<!-- ####################################################################################################### -->
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Copyright © 2017 - Derechos Reservados - BanQuetzal by 201503608</p>
+    <br class="clear" />
+  </div>
+</div>
+    </form>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------
+Crear Usuario
+<%@ Page Title="" Language="C#" MasterPageFile="~/Master1.master" AutoEventWireup="true" CodeFile="CrearU.aspx.cs" Inherits="CrearU" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table style="width: 100%">
+    <tr>
+        <td colspan="3" style="height: 26px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Crear Usuario&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 394px" rowspan="9">
+            &nbsp;</td>
+        <td style="width: 144px">ID</td>
+        <td>
+            <asp:TextBox ID="Id" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Nombre</td>
+        <td>
+            <asp:TextBox ID="nombre" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Email</td>
+        <td>
+            <asp:TextBox ID="email" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Fecha de Nacimiento</td>
+        <td>
+            <asp:TextBox ID="fecha" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Direccion</td>
+        <td>
+            <asp:TextBox ID="direccion" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Telefono</td>
+        <td>
+            <asp:TextBox ID="telefono" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Nombre de Usuario</td>
+        <td>
+            <asp:TextBox ID="usuario" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Contraseña</td>
+        <td>
+            <asp:TextBox ID="contra" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Rol</td>
+        <td>
+            <asp:TextBox ID="rol" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 394px">
+            <asp:Label ID="Label1" runat="server"></asp:Label>
+        </td>
+        <td style="width: 144px">&nbsp;</td>
+        <td>
+            <asp:Button ID="Button1" runat="server" Text="Ingresar Datos" OnClick="Button1_Click" />
+        </td>
+    </tr>
+</table>
+</asp:Content>
+
+--------------------------------------------------------------------------------------------------------------
+<%@ Page Title="" Language="C#" MasterPageFile="~/Master1.master" AutoEventWireup="true" CodeFile="CrearCuenta.aspx.cs" Inherits="CrearCuenta" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table style="width: 100%">
+    <tr>
+        <td colspan="3" style="height: 26px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Crear Usuario&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 394px" rowspan="2">
+            &nbsp;</td>
+        <td style="width: 144px">No.Cuenta</td>
+        <td>
+            <asp:TextBox ID="Id" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Saldo</td>
+        <td>
+            <asp:TextBox ID="nombre" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 394px">
+            <asp:Label ID="Label1" runat="server"></asp:Label>
+        </td>
+        <td style="width: 144px">&nbsp;</td>
+        <td>
+            <asp:Button ID="Button1" runat="server" Text="Ingresar Datos" OnClick="Button1_Click" />
+        </td>
+    </tr>
+</table>
+</asp:Content>
+--------------------------------------------------------------------------------------------------------------------------------
+<%@ Page Title="" Language="C#" MasterPageFile="~/Master1.master" AutoEventWireup="true" CodeFile="Cheques.aspx.cs" Inherits="Cheques" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table style="width: 100%">
+    <tr>
+        <td colspan="3" style="height: 26px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Crear Usuario&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="width: 394px" rowspan="2">
+            &nbsp;</td>
+        <td style="width: 144px">No.Cuenta</td>
+        <td>
+            <asp:TextBox ID="Id" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Monto</td>
+        <td>
+            <asp:TextBox ID="nombre" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+        <tr>
+        <td style="width: 394px" rowspan="2">
+            &nbsp;</td>
+        <td style="width: 144px">Cuenta a Acreditar</td>
+        <td>
+            <asp:TextBox ID="TextBox1" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 144px">Firma Digital</td>
+        <td>
+            <asp:TextBox ID="TextBox2" runat="server" Width="309px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 394px">
+            <asp:Label ID="Label1" runat="server"></asp:Label>
+        </td>
+        <td style="width: 144px">&nbsp;</td>
+        <td>
+            <asp:Button ID="Button1" runat="server" Text="Ingresar Datos" OnClick="Button1_Click" />
+        </td>
+    </tr>
+</table>
+</asp:Content>
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Login
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" /> 
+    <title>
+        LogIn
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+    <form id="form1" runat="server">
+  <h1>&nbsp;Login</h1>
+  <div class="inset">
+  <p>
+    &nbsp;USUARIO<asp:TextBox ID="usu" runat="server" Width="206px" BackColor="White" ForeColor="#FF9900"></asp:TextBox>
+  </p>
+  <p>
+      CONTRASEÑA<asp:TextBox ID="contra" runat="server" Width="206px" TextMode="Password" BackColor="White" ForeColor="#FF9900"></asp:TextBox>
+  </p>
+  </div>
+  <p class="p-container">
+    &nbsp;
+      <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Ingresar" />
+  </p>
+    </form>
+
+</body>
+</html>
