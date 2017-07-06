@@ -1,0 +1,75 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="Banquetzal.Master1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BanQuetzal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.cycle.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('#featured_slide').after('<div id="fsn"><ul id="fs_pagination">').cycle({
+        timeout: 5000,
+        fx: 'fade',
+        pager: '#fs_pagination',
+        pause: 1,
+        pauseOnPagerHover: 0
+    });
+});
+</script>
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+<div class="wrapper col0">
+</div>
+<!-- ###################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="topnav">
+      <ul>
+        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuenta</a>
+          <ul class="dropdown-menu">
+                            <li><a href="Retiro.aspx">Retiro</a></li>
+                            <li><a href="Cheques.aspx">Cobrar Cheque</a></li>
+                            <li><a href="CrearChequera.aspx">Chequera</a></li>
+                            <li><a href="EstadoCuenta.aspx">Estado</a></li>
+                            <li><a href="Prestamo.aspx">Prestamo</a></li>
+                            <li><a href="Depositos.aspx">Depositar</a></li>
+                            <li><a href="#">Transferencia</a></li>
+                            <li><a href="#">Transferencia a Terceros</a></li>
+                        </ul>
+              </li>
+        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<i class="icon-angle-down"></i></a>
+          <ul class="dropdown-menu">
+                            <li><a href="CrearUsuario.aspx">Crear</a></li>
+                            <li><a href="CrearCuenta.aspx">Crear Cuenta</a></li>
+                        </ul>
+              </li>
+          <li class="active"><a href="Inicio1.aspx">Inicio</a></li>
+      </ul>
+    </div>
+    <div id="logo">
+      <h1><a href="Inicio1.aspx"><strong>BanQuetzal</strong></a></h1>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<!-- ####################################################################################################### -->
+<div class="midpro">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</div>
+<!-- ####################################################################################################### -->
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Copyright © 2017 - Derechos Reservados - BanQuetzal by 201503608</p>
+    <br class="clear" />
+  </div>
+</div>
+    </form>
+</body>
+</html>
