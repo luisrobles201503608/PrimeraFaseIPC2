@@ -7,7 +7,7 @@
                 Cobrar Cheques</td>
         </tr>
         <tr>
-            <td rowspan="7" style="width: 430px">&nbsp;</td>
+            <td rowspan="8" style="width: 430px">&nbsp;</td>
             <td style="width: 127px">No Corelativo</td>
             <td>
                 <asp:TextBox ID="TextBox1" runat="server" Width="183px"></asp:TextBox>
@@ -41,6 +41,12 @@
             <td style="width: 127px">Chequera</td>
             <td>
                 <asp:TextBox ID="TextBox6" runat="server" Width="183px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 127px">Fecha</td>
+            <td>
+                <asp:TextBox ID="TextBox7" runat="server" Width="183px"></asp:TextBox>
             </td>
         </tr>
         <tr>

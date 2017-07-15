@@ -15,210 +15,265 @@ namespace Banquetzal.Referencia {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://Proyecto/", ConfigurationName="Referencia.WSGestionCIndividual")]
     public interface WSGestionCIndividual {
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento return del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/PrestamoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/PrestamoResponse")]
-        Banquetzal.Referencia.PrestamoResponse Prestamo(Banquetzal.Referencia.PrestamoRequest request);
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/ObtenerPremiosRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/ObtenerPremiosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.ObtenerPremiosResponse ObtenerPremios(Banquetzal.Referencia.ObtenerPremiosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/PrestamoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/PrestamoResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.PrestamoResponse> PrestamoAsync(Banquetzal.Referencia.PrestamoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/ObtenerPremiosRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/ObtenerPremiosResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.ObtenerPremiosResponse> ObtenerPremiosAsync(Banquetzal.Referencia.ObtenerPremiosRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Cui del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/DepositarRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/DepositarResponse")]
-        Banquetzal.Referencia.DepositarResponse Depositar(Banquetzal.Referencia.DepositarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/DepositarRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/DepositarResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.DepositarResponse> DepositarAsync(Banquetzal.Referencia.DepositarRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Cui del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RetirarRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RetirarResponse")]
-        Banquetzal.Referencia.RetirarResponse Retirar(Banquetzal.Referencia.RetirarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RetirarRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RetirarResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.RetirarResponse> RetirarAsync(Banquetzal.Referencia.RetirarRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Usuario del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LoginRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LoginResponse")]
-        Banquetzal.Referencia.LoginResponse Login(Banquetzal.Referencia.LoginRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LoginRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LoginResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.LoginResponse> LoginAsync(Banquetzal.Referencia.LoginRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Usuario del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LogEmpleadoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LogEmpleadoResponse")]
-        Banquetzal.Referencia.LogEmpleadoResponse LogEmpleado(Banquetzal.Referencia.LogEmpleadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LogEmpleadoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LogEmpleadoResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpleadoResponse> LogEmpleadoAsync(Banquetzal.Referencia.LogEmpleadoRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento CuentaEmpleado del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/AsignarANominRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/AsignarANominResponse")]
-        Banquetzal.Referencia.AsignarANominResponse AsignarANomin(Banquetzal.Referencia.AsignarANominRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/AsignarANominRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/AsignarANominResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.AsignarANominResponse> AsignarANominAsync(Banquetzal.Referencia.AsignarANominRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Correo del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LogEmpresaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LogEmpresaResponse")]
-        Banquetzal.Referencia.LogEmpresaResponse LogEmpresa(Banquetzal.Referencia.LogEmpresaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LogEmpresaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LogEmpresaResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpresaResponse> LogEmpresaAsync(Banquetzal.Referencia.LogEmpresaRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Estado del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CrearCuentaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CrearCuentaResponse")]
-        Banquetzal.Referencia.CrearCuentaResponse CrearCuenta(Banquetzal.Referencia.CrearCuentaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CrearCuentaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CrearCuentaResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CrearCuentaResponse> CrearCuentaAsync(Banquetzal.Referencia.CrearCuentaRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento CUI del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorResponse")]
-        Banquetzal.Referencia.RegistrarTrabajadorResponse RegistrarTrabajador(Banquetzal.Referencia.RegistrarTrabajadorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarTrabajadorResponse> RegistrarTrabajadorAsync(Banquetzal.Referencia.RegistrarTrabajadorRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Direccion del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/InsertarAgenciaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/InsertarAgenciaResponse")]
-        Banquetzal.Referencia.InsertarAgenciaResponse InsertarAgencia(Banquetzal.Referencia.InsertarAgenciaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/InsertarAgenciaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/InsertarAgenciaResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.InsertarAgenciaResponse> InsertarAgenciaAsync(Banquetzal.Referencia.InsertarAgenciaRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Usuario del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraIndiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraIndiResponse")]
-        Banquetzal.Referencia.CambiarContraIndiResponse CambiarContraIndi(Banquetzal.Referencia.CambiarContraIndiRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraIndiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraIndiResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraIndiResponse> CambiarContraIndiAsync(Banquetzal.Referencia.CambiarContraIndiRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento CodigoEmpresa del espacio de nombres  no está marcado para aceptar valores nil.
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/InsertarEmpresaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/InsertarEmpresaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         Banquetzal.Referencia.InsertarEmpresaResponse InsertarEmpresa(Banquetzal.Referencia.InsertarEmpresaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/InsertarEmpresaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/InsertarEmpresaResponse")]
         System.Threading.Tasks.Task<Banquetzal.Referencia.InsertarEmpresaResponse> InsertarEmpresaAsync(Banquetzal.Referencia.InsertarEmpresaRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Usuario del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraNomiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraNomiResponse")]
-        Banquetzal.Referencia.CambiarContraNomiResponse CambiarContraNomi(Banquetzal.Referencia.CambiarContraNomiRequest request);
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/InsertarAgenciaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/InsertarAgenciaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.InsertarAgenciaResponse InsertarAgencia(Banquetzal.Referencia.InsertarAgenciaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraNomiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraNomiResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraNomiResponse> CambiarContraNomiAsync(Banquetzal.Referencia.CambiarContraNomiRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/InsertarAgenciaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/InsertarAgenciaResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.InsertarAgenciaResponse> InsertarAgenciaAsync(Banquetzal.Referencia.InsertarAgenciaRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Usuario del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraEmpRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraEmpResponse")]
-        Banquetzal.Referencia.CambiarContraEmpResponse CambiarContraEmp(Banquetzal.Referencia.CambiarContraEmpRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraEmpRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraEmpResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraEmpResponse> CambiarContraEmpAsync(Banquetzal.Referencia.CambiarContraEmpRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento CUI del espacio de nombres  no está marcado para aceptar valores nil.
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarUsuarioIndiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarUsuarioIndiResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         Banquetzal.Referencia.RegistrarUsuarioIndiResponse RegistrarUsuarioIndi(Banquetzal.Referencia.RegistrarUsuarioIndiRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarUsuarioIndiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarUsuarioIndiResponse")]
         System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarUsuarioIndiResponse> RegistrarUsuarioIndiAsync(Banquetzal.Referencia.RegistrarUsuarioIndiRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento Correlativo del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CrearChequeraRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CrearChequeraResponse")]
-        Banquetzal.Referencia.CrearChequeraResponse CrearChequera(Banquetzal.Referencia.CrearChequeraRequest request);
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.RegistrarTrabajadorResponse RegistrarTrabajador(Banquetzal.Referencia.RegistrarTrabajadorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CrearChequeraRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CrearChequeraResponse")]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CrearChequeraResponse> CrearChequeraAsync(Banquetzal.Referencia.CrearChequeraRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarTrabajadorResponse> RegistrarTrabajadorAsync(Banquetzal.Referencia.RegistrarTrabajadorRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://Proyecto/).
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/DepositoTercerosRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/DepositoTercerosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.DepositoTercerosResponse DepositoTerceros(Banquetzal.Referencia.DepositoTercerosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/DepositoTercerosRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/DepositoTercerosResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.DepositoTercerosResponse> DepositoTercerosAsync(Banquetzal.Referencia.DepositoTercerosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraEmpRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraEmpResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.CambiarContraEmpResponse CambiarContraEmp(Banquetzal.Referencia.CambiarContraEmpRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraEmpRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraEmpResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraEmpResponse> CambiarContraEmpAsync(Banquetzal.Referencia.CambiarContraEmpRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraIndiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraIndiResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.CambiarContraIndiResponse CambiarContraIndi(Banquetzal.Referencia.CambiarContraIndiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraIndiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraIndiResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraIndiResponse> CambiarContraIndiAsync(Banquetzal.Referencia.CambiarContraIndiRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/EstadoCDepositoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/EstadoCDepositoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         Banquetzal.Referencia.EstadoCDepositoResponse EstadoCDeposito(Banquetzal.Referencia.EstadoCDepositoRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/EstadoCDepositoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/EstadoCDepositoResponse")]
         System.Threading.Tasks.Task<Banquetzal.Referencia.EstadoCDepositoResponse> EstadoCDepositoAsync(Banquetzal.Referencia.EstadoCDepositoRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarProveedorRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarProveedorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.RegistrarProveedorResponse RegistrarProveedor(Banquetzal.Referencia.RegistrarProveedorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarProveedorRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarProveedorResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarProveedorResponse> RegistrarProveedorAsync(Banquetzal.Referencia.RegistrarProveedorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarPremioRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarPremioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.RegistrarPremioResponse RegistrarPremio(Banquetzal.Referencia.RegistrarPremioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RegistrarPremioRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RegistrarPremioResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarPremioResponse> RegistrarPremioAsync(Banquetzal.Referencia.RegistrarPremioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/SolicitudProveedoresRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/SolicitudProveedoresResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.SolicitudProveedoresResponse SolicitudProveedores(Banquetzal.Referencia.SolicitudProveedoresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/SolicitudProveedoresRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/SolicitudProveedoresResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.SolicitudProveedoresResponse> SolicitudProveedoresAsync(Banquetzal.Referencia.SolicitudProveedoresRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraNomiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraNomiResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.CambiarContraNomiResponse CambiarContraNomi(Banquetzal.Referencia.CambiarContraNomiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CambiarContraNomiRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CambiarContraNomiResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraNomiResponse> CambiarContraNomiAsync(Banquetzal.Referencia.CambiarContraNomiRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/ReportePuntosRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/ReportePuntosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.ReportePuntosResponse ReportePuntos(Banquetzal.Referencia.ReportePuntosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/ReportePuntosRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/ReportePuntosResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.ReportePuntosResponse> ReportePuntosAsync(Banquetzal.Referencia.ReportePuntosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LogEmpleadoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LogEmpleadoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.LogEmpleadoResponse LogEmpleado(Banquetzal.Referencia.LogEmpleadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LogEmpleadoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LogEmpleadoResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpleadoResponse> LogEmpleadoAsync(Banquetzal.Referencia.LogEmpleadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/AsignarANominRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/AsignarANominResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.AsignarANominResponse AsignarANomin(Banquetzal.Referencia.AsignarANominRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/AsignarANominRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/AsignarANominResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.AsignarANominResponse> AsignarANominAsync(Banquetzal.Referencia.AsignarANominRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LoginRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LoginResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.LoginResponse Login(Banquetzal.Referencia.LoginRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LoginRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LoginResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.LoginResponse> LoginAsync(Banquetzal.Referencia.LoginRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RetirarRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RetirarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.RetirarResponse Retirar(Banquetzal.Referencia.RetirarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/RetirarRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/RetirarResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.RetirarResponse> RetirarAsync(Banquetzal.Referencia.RetirarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/PrestamoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/PrestamoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.PrestamoResponse Prestamo(Banquetzal.Referencia.PrestamoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/PrestamoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/PrestamoResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.PrestamoResponse> PrestamoAsync(Banquetzal.Referencia.PrestamoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CrearCuentaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CrearCuentaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.CrearCuentaResponse CrearCuenta(Banquetzal.Referencia.CrearCuentaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CrearCuentaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CrearCuentaResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CrearCuentaResponse> CrearCuentaAsync(Banquetzal.Referencia.CrearCuentaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LogEmpresaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LogEmpresaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.LogEmpresaResponse LogEmpresa(Banquetzal.Referencia.LogEmpresaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/LogEmpresaRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/LogEmpresaResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpresaResponse> LogEmpresaAsync(Banquetzal.Referencia.LogEmpresaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CrearChequeraRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CrearChequeraResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.CrearChequeraResponse CrearChequera(Banquetzal.Referencia.CrearChequeraRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/CrearChequeraRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/CrearChequeraResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CrearChequeraResponse> CrearChequeraAsync(Banquetzal.Referencia.CrearChequeraRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/ChequeRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/ChequeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         Banquetzal.Referencia.ChequeResponse Cheque(Banquetzal.Referencia.ChequeRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/ChequeRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/ChequeResponse")]
         System.Threading.Tasks.Task<Banquetzal.Referencia.ChequeResponse> ChequeAsync(Banquetzal.Referencia.ChequeRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://Proyecto/).
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/DepositarRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/DepositarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.DepositarResponse Depositar(Banquetzal.Referencia.DepositarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/DepositarRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/DepositarResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.DepositarResponse> DepositarAsync(Banquetzal.Referencia.DepositarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/EstadoCRetiroRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/EstadoCRetiroResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         Banquetzal.Referencia.EstadoCRetiroResponse EstadoCRetiro(Banquetzal.Referencia.EstadoCRetiroRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/EstadoCRetiroRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/EstadoCRetiroResponse")]
         System.Threading.Tasks.Task<Banquetzal.Referencia.EstadoCRetiroResponse> EstadoCRetiroAsync(Banquetzal.Referencia.EstadoCRetiroRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/ComprarProductoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/ComprarProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        Banquetzal.Referencia.ComprarProductoResponse ComprarProducto(Banquetzal.Referencia.ComprarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://Proyecto/WSGestionCIndividual/ComprarProductoRequest", ReplyAction="http://Proyecto/WSGestionCIndividual/ComprarProductoResponse")]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.ComprarProductoResponse> ComprarProductoAsync(Banquetzal.Referencia.ComprarProductoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class PrestamoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ObtenerPremios", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class ObtenerPremiosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Prestamo", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.PrestamoRequestBody Body;
-        
-        public PrestamoRequest() {
-        }
-        
-        public PrestamoRequest(Banquetzal.Referencia.PrestamoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class PrestamoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int Cantidad;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int noCuenta;
-        
-        public PrestamoRequestBody() {
-        }
-        
-        public PrestamoRequestBody(int Cantidad, int noCuenta) {
-            this.Cantidad = Cantidad;
-            this.noCuenta = noCuenta;
+        public ObtenerPremiosRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class PrestamoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ObtenerPremiosResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class ObtenerPremiosResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="PrestamoResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.PrestamoResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string[] @return;
         
-        public PrestamoResponse() {
+        public ObtenerPremiosResponse() {
         }
         
-        public PrestamoResponse(Banquetzal.Referencia.PrestamoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class PrestamoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public PrestamoResponseBody() {
-        }
-        
-        public PrestamoResponseBody(string @return) {
+        public ObtenerPremiosResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -226,71 +281,50 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class DepositarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarEmpresa", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class InsertarEmpresaRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Depositar", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.DepositarRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string CodigoEmpresa;
         
-        public DepositarRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Telefono;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Correo;
+        
+        public InsertarEmpresaRequest() {
         }
         
-        public DepositarRequest(Banquetzal.Referencia.DepositarRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class DepositarRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string Cui;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int retiro;
-        
-        public DepositarRequestBody() {
-        }
-        
-        public DepositarRequestBody(string Cui, int retiro) {
-            this.Cui = Cui;
-            this.retiro = retiro;
+        public InsertarEmpresaRequest(string CodigoEmpresa, string Nombre, string Telefono, string Correo) {
+            this.CodigoEmpresa = CodigoEmpresa;
+            this.Nombre = Nombre;
+            this.Telefono = Telefono;
+            this.Correo = Correo;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class DepositarResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarEmpresaResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class InsertarEmpresaResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="DepositarResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.DepositarResponseBody Body;
-        
-        public DepositarResponse() {
-        }
-        
-        public DepositarResponse(Banquetzal.Referencia.DepositarResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class DepositarResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public DepositarResponseBody() {
+        public InsertarEmpresaResponse() {
         }
         
-        public DepositarResponseBody(string @return) {
+        public InsertarEmpresaResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -298,71 +332,55 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class RetirarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarAgencia", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class InsertarAgenciaRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Retirar", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.RetirarRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int Codigo;
         
-        public RetirarRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Direccion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Telefono;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string HApertura;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string HCierre;
+        
+        public InsertarAgenciaRequest() {
         }
         
-        public RetirarRequest(Banquetzal.Referencia.RetirarRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class RetirarRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string Cui;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int retiro;
-        
-        public RetirarRequestBody() {
-        }
-        
-        public RetirarRequestBody(string Cui, int retiro) {
-            this.Cui = Cui;
-            this.retiro = retiro;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class RetirarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="RetirarResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.RetirarResponseBody Body;
-        
-        public RetirarResponse() {
-        }
-        
-        public RetirarResponse(Banquetzal.Referencia.RetirarResponseBody Body) {
-            this.Body = Body;
+        public InsertarAgenciaRequest(int Codigo, string Direccion, string Telefono, string HApertura, string HCierre) {
+            this.Codigo = Codigo;
+            this.Direccion = Direccion;
+            this.Telefono = Telefono;
+            this.HApertura = HApertura;
+            this.HCierre = HCierre;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class RetirarResponseBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertarAgenciaResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class InsertarAgenciaResponse {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public RetirarResponseBody() {
+        public InsertarAgenciaResponse() {
         }
         
-        public RetirarResponseBody(string @return) {
+        public InsertarAgenciaResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -370,36 +388,51 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LoginRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarUsuarioIndi", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class RegistrarUsuarioIndiRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Login", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.LoginRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string CUI;
         
-        public LoginRequest() {
-        }
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Nombre;
         
-        public LoginRequest(Banquetzal.Referencia.LoginRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class LoginRequestBody {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Apellido;
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string FechaNac;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Telefono;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Usuario;
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Contraseña;
         
-        public LoginRequestBody() {
+        public RegistrarUsuarioIndiRequest() {
         }
         
-        public LoginRequestBody(string Usuario, string Contraseña) {
+        public RegistrarUsuarioIndiRequest(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña) {
+            this.CUI = CUI;
+            this.Nombre = Nombre;
+            this.Apellido = Apellido;
+            this.FechaNac = FechaNac;
+            this.Telefono = Telefono;
+            this.Correo = Correo;
             this.Usuario = Usuario;
             this.Contraseña = Contraseña;
         }
@@ -408,33 +441,17 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LoginResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarUsuarioIndiResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class RegistrarUsuarioIndiResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LoginResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.LoginResponseBody Body;
-        
-        public LoginResponse() {
-        }
-        
-        public LoginResponse(Banquetzal.Referencia.LoginResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class LoginResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public LoginResponseBody() {
+        public RegistrarUsuarioIndiResponse() {
         }
         
-        public LoginResponseBody(string @return) {
+        public RegistrarUsuarioIndiResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -442,368 +459,53 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LogEmpleadoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LogEmpleado", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.LogEmpleadoRequestBody Body;
-        
-        public LogEmpleadoRequest() {
-        }
-        
-        public LogEmpleadoRequest(Banquetzal.Referencia.LogEmpleadoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class LogEmpleadoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string Usuario;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Contra;
-        
-        public LogEmpleadoRequestBody() {
-        }
-        
-        public LogEmpleadoRequestBody(string Usuario, string Contra) {
-            this.Usuario = Usuario;
-            this.Contra = Contra;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LogEmpleadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LogEmpleadoResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.LogEmpleadoResponseBody Body;
-        
-        public LogEmpleadoResponse() {
-        }
-        
-        public LogEmpleadoResponse(Banquetzal.Referencia.LogEmpleadoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class LogEmpleadoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public LogEmpleadoResponseBody() {
-        }
-        
-        public LogEmpleadoResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class AsignarANominRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AsignarANomin", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.AsignarANominRequestBody Body;
-        
-        public AsignarANominRequest() {
-        }
-        
-        public AsignarANominRequest(Banquetzal.Referencia.AsignarANominRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class AsignarANominRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int CodigoNomina;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int Salario;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string CuentaEmpleado;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public int CodigoEmpresa;
-        
-        public AsignarANominRequestBody() {
-        }
-        
-        public AsignarANominRequestBody(int CodigoNomina, int Salario, string CuentaEmpleado, int CodigoEmpresa) {
-            this.CodigoNomina = CodigoNomina;
-            this.Salario = Salario;
-            this.CuentaEmpleado = CuentaEmpleado;
-            this.CodigoEmpresa = CodigoEmpresa;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class AsignarANominResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="AsignarANominResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.AsignarANominResponseBody Body;
-        
-        public AsignarANominResponse() {
-        }
-        
-        public AsignarANominResponse(Banquetzal.Referencia.AsignarANominResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class AsignarANominResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public AsignarANominResponseBody() {
-        }
-        
-        public AsignarANominResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LogEmpresaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LogEmpresa", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.LogEmpresaRequestBody Body;
-        
-        public LogEmpresaRequest() {
-        }
-        
-        public LogEmpresaRequest(Banquetzal.Referencia.LogEmpresaRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class LogEmpresaRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string Correo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Telefono;
-        
-        public LogEmpresaRequestBody() {
-        }
-        
-        public LogEmpresaRequestBody(string Correo, string Telefono) {
-            this.Correo = Correo;
-            this.Telefono = Telefono;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LogEmpresaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LogEmpresaResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.LogEmpresaResponseBody Body;
-        
-        public LogEmpresaResponse() {
-        }
-        
-        public LogEmpresaResponse(Banquetzal.Referencia.LogEmpresaResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class LogEmpresaResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public LogEmpresaResponseBody() {
-        }
-        
-        public LogEmpresaResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CrearCuentaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CrearCuenta", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CrearCuentaRequestBody Body;
-        
-        public CrearCuentaRequest() {
-        }
-        
-        public CrearCuentaRequest(Banquetzal.Referencia.CrearCuentaRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CrearCuentaRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int NOCuenta;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int Saldo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string Estado;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string ClienteID;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public int TipoC;
-        
-        public CrearCuentaRequestBody() {
-        }
-        
-        public CrearCuentaRequestBody(int NOCuenta, int Saldo, string Estado, string ClienteID, int TipoC) {
-            this.NOCuenta = NOCuenta;
-            this.Saldo = Saldo;
-            this.Estado = Estado;
-            this.ClienteID = ClienteID;
-            this.TipoC = TipoC;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CrearCuentaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CrearCuentaResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CrearCuentaResponseBody Body;
-        
-        public CrearCuentaResponse() {
-        }
-        
-        public CrearCuentaResponse(Banquetzal.Referencia.CrearCuentaResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CrearCuentaResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public CrearCuentaResponseBody() {
-        }
-        
-        public CrearCuentaResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarTrabajador", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
     public partial class RegistrarTrabajadorRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistrarTrabajador", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.RegistrarTrabajadorRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string CUI;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Apellido;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string FechaNac;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Telefono;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Usuario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Contraseña;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int Rol;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int Agencia;
         
         public RegistrarTrabajadorRequest() {
         }
         
-        public RegistrarTrabajadorRequest(Banquetzal.Referencia.RegistrarTrabajadorRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class RegistrarTrabajadorRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string CUI;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Nombre;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string Apellido;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FechaNac;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string Telefono;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string Correo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string Usuario;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public string Contraseña;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=8)]
-        public int Rol;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
-        public int Agencia;
-        
-        public RegistrarTrabajadorRequestBody() {
-        }
-        
-        public RegistrarTrabajadorRequestBody(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña, int Rol, int Agencia) {
+        public RegistrarTrabajadorRequest(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña, int Rol, int Agencia) {
             this.CUI = CUI;
             this.Nombre = Nombre;
             this.Apellido = Apellido;
@@ -820,33 +522,63 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarTrabajadorResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
     public partial class RegistrarTrabajadorResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistrarTrabajadorResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.RegistrarTrabajadorResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
         
         public RegistrarTrabajadorResponse() {
         }
         
-        public RegistrarTrabajadorResponse(Banquetzal.Referencia.RegistrarTrabajadorResponseBody Body) {
-            this.Body = Body;
+        public RegistrarTrabajadorResponse(string @return) {
+            this.@return = @return;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class RegistrarTrabajadorResponseBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DepositoTerceros", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class DepositoTercerosRequest {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string NoCuenta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string NoCuentaDepositante;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int Monto;
+        
+        public DepositoTercerosRequest() {
+        }
+        
+        public DepositoTercerosRequest(string NoCuenta, string NoCuentaDepositante, int Monto) {
+            this.NoCuenta = NoCuenta;
+            this.NoCuentaDepositante = NoCuentaDepositante;
+            this.Monto = Monto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DepositoTercerosResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class DepositoTercerosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
         
-        public RegistrarTrabajadorResponseBody() {
+        public DepositoTercerosResponse() {
         }
         
-        public RegistrarTrabajadorResponseBody(string @return) {
+        public DepositoTercerosResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -854,344 +586,21 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertarAgenciaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarAgencia", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.InsertarAgenciaRequestBody Body;
-        
-        public InsertarAgenciaRequest() {
-        }
-        
-        public InsertarAgenciaRequest(Banquetzal.Referencia.InsertarAgenciaRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class InsertarAgenciaRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int Codigo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Direccion;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string Telefono;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string HApertura;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string HCierre;
-        
-        public InsertarAgenciaRequestBody() {
-        }
-        
-        public InsertarAgenciaRequestBody(int Codigo, string Direccion, string Telefono, string HApertura, string HCierre) {
-            this.Codigo = Codigo;
-            this.Direccion = Direccion;
-            this.Telefono = Telefono;
-            this.HApertura = HApertura;
-            this.HCierre = HCierre;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertarAgenciaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarAgenciaResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.InsertarAgenciaResponseBody Body;
-        
-        public InsertarAgenciaResponse() {
-        }
-        
-        public InsertarAgenciaResponse(Banquetzal.Referencia.InsertarAgenciaResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class InsertarAgenciaResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public InsertarAgenciaResponseBody() {
-        }
-        
-        public InsertarAgenciaResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CambiarContraIndiRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarContraIndi", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CambiarContraIndiRequestBody Body;
-        
-        public CambiarContraIndiRequest() {
-        }
-        
-        public CambiarContraIndiRequest(Banquetzal.Referencia.CambiarContraIndiRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CambiarContraIndiRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string Usuario;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Contraseña;
-        
-        public CambiarContraIndiRequestBody() {
-        }
-        
-        public CambiarContraIndiRequestBody(string Usuario, string Contraseña) {
-            this.Usuario = Usuario;
-            this.Contraseña = Contraseña;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CambiarContraIndiResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarContraIndiResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CambiarContraIndiResponseBody Body;
-        
-        public CambiarContraIndiResponse() {
-        }
-        
-        public CambiarContraIndiResponse(Banquetzal.Referencia.CambiarContraIndiResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CambiarContraIndiResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool @return;
-        
-        public CambiarContraIndiResponseBody() {
-        }
-        
-        public CambiarContraIndiResponseBody(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertarEmpresaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarEmpresa", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.InsertarEmpresaRequestBody Body;
-        
-        public InsertarEmpresaRequest() {
-        }
-        
-        public InsertarEmpresaRequest(Banquetzal.Referencia.InsertarEmpresaRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class InsertarEmpresaRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string CodigoEmpresa;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Nombre;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string Telefono;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string Correo;
-        
-        public InsertarEmpresaRequestBody() {
-        }
-        
-        public InsertarEmpresaRequestBody(string CodigoEmpresa, string Nombre, string Telefono, string Correo) {
-            this.CodigoEmpresa = CodigoEmpresa;
-            this.Nombre = Nombre;
-            this.Telefono = Telefono;
-            this.Correo = Correo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertarEmpresaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertarEmpresaResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.InsertarEmpresaResponseBody Body;
-        
-        public InsertarEmpresaResponse() {
-        }
-        
-        public InsertarEmpresaResponse(Banquetzal.Referencia.InsertarEmpresaResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class InsertarEmpresaResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public InsertarEmpresaResponseBody() {
-        }
-        
-        public InsertarEmpresaResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CambiarContraNomiRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarContraNomi", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CambiarContraNomiRequestBody Body;
-        
-        public CambiarContraNomiRequest() {
-        }
-        
-        public CambiarContraNomiRequest(Banquetzal.Referencia.CambiarContraNomiRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CambiarContraNomiRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string Usuario;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Contraseña;
-        
-        public CambiarContraNomiRequestBody() {
-        }
-        
-        public CambiarContraNomiRequestBody(string Usuario, string Contraseña) {
-            this.Usuario = Usuario;
-            this.Contraseña = Contraseña;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CambiarContraNomiResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarContraNomiResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CambiarContraNomiResponseBody Body;
-        
-        public CambiarContraNomiResponse() {
-        }
-        
-        public CambiarContraNomiResponse(Banquetzal.Referencia.CambiarContraNomiResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CambiarContraNomiResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool @return;
-        
-        public CambiarContraNomiResponseBody() {
-        }
-        
-        public CambiarContraNomiResponseBody(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CambiarContraEmp", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
     public partial class CambiarContraEmpRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarContraEmp", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CambiarContraEmpRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Usuario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Contraseña;
         
         public CambiarContraEmpRequest() {
         }
         
-        public CambiarContraEmpRequest(Banquetzal.Referencia.CambiarContraEmpRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CambiarContraEmpRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string Usuario;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Contraseña;
-        
-        public CambiarContraEmpRequestBody() {
-        }
-        
-        public CambiarContraEmpRequestBody(string Usuario, string Contraseña) {
+        public CambiarContraEmpRequest(string Usuario, string Contraseña) {
             this.Usuario = Usuario;
             this.Contraseña = Contraseña;
         }
@@ -1200,33 +609,17 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CambiarContraEmpResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
     public partial class CambiarContraEmpResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CambiarContraEmpResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CambiarContraEmpResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
         
         public CambiarContraEmpResponse() {
         }
         
-        public CambiarContraEmpResponse(Banquetzal.Referencia.CambiarContraEmpResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CambiarContraEmpResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool @return;
-        
-        public CambiarContraEmpResponseBody() {
-        }
-        
-        public CambiarContraEmpResponseBody(bool @return) {
+        public CambiarContraEmpResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -1234,60 +627,21 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class RegistrarUsuarioIndiRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CambiarContraIndi", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class CambiarContraIndiRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistrarUsuarioIndi", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.RegistrarUsuarioIndiRequestBody Body;
-        
-        public RegistrarUsuarioIndiRequest() {
-        }
-        
-        public RegistrarUsuarioIndiRequest(Banquetzal.Referencia.RegistrarUsuarioIndiRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class RegistrarUsuarioIndiRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string CUI;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Nombre;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string Apellido;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FechaNac;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string Telefono;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string Correo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Usuario;
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string Contraseña;
         
-        public RegistrarUsuarioIndiRequestBody() {
+        public CambiarContraIndiRequest() {
         }
         
-        public RegistrarUsuarioIndiRequestBody(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña) {
-            this.CUI = CUI;
-            this.Nombre = Nombre;
-            this.Apellido = Apellido;
-            this.FechaNac = FechaNac;
-            this.Telefono = Telefono;
-            this.Correo = Correo;
+        public CambiarContraIndiRequest(string Usuario, string Contraseña) {
             this.Usuario = Usuario;
             this.Contraseña = Contraseña;
         }
@@ -1296,105 +650,17 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class RegistrarUsuarioIndiResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CambiarContraIndiResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class CambiarContraIndiResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="RegistrarUsuarioIndiResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.RegistrarUsuarioIndiResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
         
-        public RegistrarUsuarioIndiResponse() {
+        public CambiarContraIndiResponse() {
         }
         
-        public RegistrarUsuarioIndiResponse(Banquetzal.Referencia.RegistrarUsuarioIndiResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class RegistrarUsuarioIndiResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public RegistrarUsuarioIndiResponseBody() {
-        }
-        
-        public RegistrarUsuarioIndiResponseBody(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CrearChequeraRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CrearChequera", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CrearChequeraRequestBody Body;
-        
-        public CrearChequeraRequest() {
-        }
-        
-        public CrearChequeraRequest(Banquetzal.Referencia.CrearChequeraRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CrearChequeraRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string Correlativo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int noCuenta;
-        
-        public CrearChequeraRequestBody() {
-        }
-        
-        public CrearChequeraRequestBody(string Correlativo, int noCuenta) {
-            this.Correlativo = Correlativo;
-            this.noCuenta = noCuenta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CrearChequeraResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CrearChequeraResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.CrearChequeraResponseBody Body;
-        
-        public CrearChequeraResponse() {
-        }
-        
-        public CrearChequeraResponse(Banquetzal.Referencia.CrearChequeraResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class CrearChequeraResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
-        
-        public CrearChequeraResponseBody() {
-        }
-        
-        public CrearChequeraResponseBody(string @return) {
+        public CambiarContraIndiResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -1405,7 +671,8 @@ namespace Banquetzal.Referencia {
     [System.ServiceModel.MessageContractAttribute(WrapperName="EstadoCDeposito", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
     public partial class EstadoCDepositoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int noCuenta;
         
         public EstadoCDepositoRequest() {
@@ -1422,7 +689,8 @@ namespace Banquetzal.Referencia {
     [System.ServiceModel.MessageContractAttribute(WrapperName="EstadoCDepositoResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
     public partial class EstadoCDepositoResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
         public EstadoCDepositoResponse() {
@@ -1436,87 +704,699 @@ namespace Banquetzal.Referencia {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ChequeRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarProveedor", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class RegistrarProveedorRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="Cheque", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.ChequeRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
         
-        public ChequeRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int telefono;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correo;
+        
+        public RegistrarProveedorRequest() {
         }
         
-        public ChequeRequest(Banquetzal.Referencia.ChequeRequestBody Body) {
-            this.Body = Body;
+        public RegistrarProveedorRequest(string nombre, int telefono, string correo) {
+            this.nombre = nombre;
+            this.telefono = telefono;
+            this.correo = correo;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class ChequeRequestBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarProveedorResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class RegistrarProveedorResponse {
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int Correlativo;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string nombre;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public int monto;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string firma;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public int noCuenta;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string Chequera;
-        
-        public ChequeRequestBody() {
+        public RegistrarProveedorResponse() {
         }
         
-        public ChequeRequestBody(int Correlativo, string nombre, int monto, string firma, int noCuenta, string Chequera) {
+        public RegistrarProveedorResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarPremio", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class RegistrarPremioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int Valor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int existencia;
+        
+        public RegistrarPremioRequest() {
+        }
+        
+        public RegistrarPremioRequest(string Nombre, int Valor, int existencia) {
+            this.Nombre = Nombre;
+            this.Valor = Valor;
+            this.existencia = existencia;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarPremioResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class RegistrarPremioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public RegistrarPremioResponse() {
+        }
+        
+        public RegistrarPremioResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SolicitudProveedores", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class SolicitudProveedoresRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string premio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string proveedor;
+        
+        public SolicitudProveedoresRequest() {
+        }
+        
+        public SolicitudProveedoresRequest(string premio, string proveedor) {
+            this.premio = premio;
+            this.proveedor = proveedor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SolicitudProveedoresResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class SolicitudProveedoresResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public SolicitudProveedoresResponse() {
+        }
+        
+        public SolicitudProveedoresResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CambiarContraNomi", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class CambiarContraNomiRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Usuario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Contraseña;
+        
+        public CambiarContraNomiRequest() {
+        }
+        
+        public CambiarContraNomiRequest(string Usuario, string Contraseña) {
+            this.Usuario = Usuario;
+            this.Contraseña = Contraseña;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CambiarContraNomiResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class CambiarContraNomiResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public CambiarContraNomiResponse() {
+        }
+        
+        public CambiarContraNomiResponse(bool @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReportePuntos", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class ReportePuntosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int noCuenta;
+        
+        public ReportePuntosRequest() {
+        }
+        
+        public ReportePuntosRequest(int noCuenta) {
+            this.noCuenta = noCuenta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReportePuntosResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class ReportePuntosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public ReportePuntosResponse() {
+        }
+        
+        public ReportePuntosResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LogEmpleado", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class LogEmpleadoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Usuario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Contra;
+        
+        public LogEmpleadoRequest() {
+        }
+        
+        public LogEmpleadoRequest(string Usuario, string Contra) {
+            this.Usuario = Usuario;
+            this.Contra = Contra;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LogEmpleadoResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class LogEmpleadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public LogEmpleadoResponse() {
+        }
+        
+        public LogEmpleadoResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AsignarANomin", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class AsignarANominRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int CodigoNomina;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int Salario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string CuentaEmpleado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int CodigoEmpresa;
+        
+        public AsignarANominRequest() {
+        }
+        
+        public AsignarANominRequest(int CodigoNomina, int Salario, string CuentaEmpleado, int CodigoEmpresa) {
+            this.CodigoNomina = CodigoNomina;
+            this.Salario = Salario;
+            this.CuentaEmpleado = CuentaEmpleado;
+            this.CodigoEmpresa = CodigoEmpresa;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AsignarANominResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class AsignarANominResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public AsignarANominResponse() {
+        }
+        
+        public AsignarANominResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Login", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class LoginRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Usuario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Contraseña;
+        
+        public LoginRequest() {
+        }
+        
+        public LoginRequest(string Usuario, string Contraseña) {
+            this.Usuario = Usuario;
+            this.Contraseña = Contraseña;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LoginResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class LoginResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public LoginResponse() {
+        }
+        
+        public LoginResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Retirar", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class RetirarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Cui;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int retiro;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Fecha;
+        
+        public RetirarRequest() {
+        }
+        
+        public RetirarRequest(string Cui, int retiro, string Fecha) {
+            this.Cui = Cui;
+            this.retiro = retiro;
+            this.Fecha = Fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RetirarResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class RetirarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public RetirarResponse() {
+        }
+        
+        public RetirarResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Prestamo", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class PrestamoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int Cantidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int noCuenta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Estado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Fecha;
+        
+        public PrestamoRequest() {
+        }
+        
+        public PrestamoRequest(int Cantidad, int noCuenta, string Estado, string Fecha) {
+            this.Cantidad = Cantidad;
+            this.noCuenta = noCuenta;
+            this.Estado = Estado;
+            this.Fecha = Fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PrestamoResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class PrestamoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public PrestamoResponse() {
+        }
+        
+        public PrestamoResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearCuenta", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class CrearCuentaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int NOCuenta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int Saldo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Estado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Fecha;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string ClienteID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int TipoC;
+        
+        public CrearCuentaRequest() {
+        }
+        
+        public CrearCuentaRequest(int NOCuenta, int Saldo, string Estado, string Fecha, string ClienteID, int TipoC) {
+            this.NOCuenta = NOCuenta;
+            this.Saldo = Saldo;
+            this.Estado = Estado;
+            this.Fecha = Fecha;
+            this.ClienteID = ClienteID;
+            this.TipoC = TipoC;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearCuentaResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class CrearCuentaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public CrearCuentaResponse() {
+        }
+        
+        public CrearCuentaResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LogEmpresa", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class LogEmpresaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Telefono;
+        
+        public LogEmpresaRequest() {
+        }
+        
+        public LogEmpresaRequest(string Correo, string Telefono) {
+            this.Correo = Correo;
+            this.Telefono = Telefono;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LogEmpresaResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class LogEmpresaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public LogEmpresaResponse() {
+        }
+        
+        public LogEmpresaResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearChequera", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class CrearChequeraRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Correlativo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int noCuenta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Fecha;
+        
+        public CrearChequeraRequest() {
+        }
+        
+        public CrearChequeraRequest(string Correlativo, int noCuenta, string Fecha) {
+            this.Correlativo = Correlativo;
+            this.noCuenta = noCuenta;
+            this.Fecha = Fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CrearChequeraResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class CrearChequeraResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public CrearChequeraResponse() {
+        }
+        
+        public CrearChequeraResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Cheque", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class ChequeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int Correlativo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int monto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string firma;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int noCuenta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Chequera;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Fecha;
+        
+        public ChequeRequest() {
+        }
+        
+        public ChequeRequest(int Correlativo, string nombre, int monto, string firma, int noCuenta, string Chequera, string Fecha) {
             this.Correlativo = Correlativo;
             this.nombre = nombre;
             this.monto = monto;
             this.firma = firma;
             this.noCuenta = noCuenta;
             this.Chequera = Chequera;
+            this.Fecha = Fecha;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ChequeResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
     public partial class ChequeResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ChequeResponse", Namespace="http://Proyecto/", Order=0)]
-        public Banquetzal.Referencia.ChequeResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
         
         public ChequeResponse() {
         }
         
-        public ChequeResponse(Banquetzal.Referencia.ChequeResponseBody Body) {
-            this.Body = Body;
+        public ChequeResponse(string @return) {
+            this.@return = @return;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class ChequeResponseBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Depositar", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class DepositarRequest {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string @return;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Cui;
         
-        public ChequeResponseBody() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int retiro;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Fecha;
+        
+        public DepositarRequest() {
         }
         
-        public ChequeResponseBody(string @return) {
+        public DepositarRequest(string Cui, int retiro, string Fecha) {
+            this.Cui = Cui;
+            this.retiro = retiro;
+            this.Fecha = Fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DepositarResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class DepositarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public DepositarResponse() {
+        }
+        
+        public DepositarResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -1527,7 +1407,8 @@ namespace Banquetzal.Referencia {
     [System.ServiceModel.MessageContractAttribute(WrapperName="EstadoCRetiro", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
     public partial class EstadoCRetiroRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int noCuenta;
         
         public EstadoCRetiroRequest() {
@@ -1544,13 +1425,55 @@ namespace Banquetzal.Referencia {
     [System.ServiceModel.MessageContractAttribute(WrapperName="EstadoCRetiroResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
     public partial class EstadoCRetiroResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
         public EstadoCRetiroResponse() {
         }
         
         public EstadoCRetiroResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ComprarProducto", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class ComprarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string noCuenta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string Premio;
+        
+        public ComprarProductoRequest() {
+        }
+        
+        public ComprarProductoRequest(string noCuenta, string Premio) {
+            this.noCuenta = noCuenta;
+            this.Premio = Premio;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ComprarProductoResponse", WrapperNamespace="http://Proyecto/", IsWrapped=true)]
+    public partial class ComprarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Proyecto/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public ComprarProductoResponse() {
+        }
+        
+        public ComprarProductoResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -1583,332 +1506,24 @@ namespace Banquetzal.Referencia {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.PrestamoResponse Banquetzal.Referencia.WSGestionCIndividual.Prestamo(Banquetzal.Referencia.PrestamoRequest request) {
-            return base.Channel.Prestamo(request);
+        Banquetzal.Referencia.ObtenerPremiosResponse Banquetzal.Referencia.WSGestionCIndividual.ObtenerPremios(Banquetzal.Referencia.ObtenerPremiosRequest request) {
+            return base.Channel.ObtenerPremios(request);
         }
         
-        public string Prestamo(int Cantidad, int noCuenta) {
-            Banquetzal.Referencia.PrestamoRequest inValue = new Banquetzal.Referencia.PrestamoRequest();
-            inValue.Body = new Banquetzal.Referencia.PrestamoRequestBody();
-            inValue.Body.Cantidad = Cantidad;
-            inValue.Body.noCuenta = noCuenta;
-            Banquetzal.Referencia.PrestamoResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).Prestamo(inValue);
-            return retVal.Body.@return;
+        public string[] ObtenerPremios() {
+            Banquetzal.Referencia.ObtenerPremiosRequest inValue = new Banquetzal.Referencia.ObtenerPremiosRequest();
+            Banquetzal.Referencia.ObtenerPremiosResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).ObtenerPremios(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.PrestamoResponse> Banquetzal.Referencia.WSGestionCIndividual.PrestamoAsync(Banquetzal.Referencia.PrestamoRequest request) {
-            return base.Channel.PrestamoAsync(request);
+        System.Threading.Tasks.Task<Banquetzal.Referencia.ObtenerPremiosResponse> Banquetzal.Referencia.WSGestionCIndividual.ObtenerPremiosAsync(Banquetzal.Referencia.ObtenerPremiosRequest request) {
+            return base.Channel.ObtenerPremiosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.PrestamoResponse> PrestamoAsync(int Cantidad, int noCuenta) {
-            Banquetzal.Referencia.PrestamoRequest inValue = new Banquetzal.Referencia.PrestamoRequest();
-            inValue.Body = new Banquetzal.Referencia.PrestamoRequestBody();
-            inValue.Body.Cantidad = Cantidad;
-            inValue.Body.noCuenta = noCuenta;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).PrestamoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.DepositarResponse Banquetzal.Referencia.WSGestionCIndividual.Depositar(Banquetzal.Referencia.DepositarRequest request) {
-            return base.Channel.Depositar(request);
-        }
-        
-        public string Depositar(string Cui, int retiro) {
-            Banquetzal.Referencia.DepositarRequest inValue = new Banquetzal.Referencia.DepositarRequest();
-            inValue.Body = new Banquetzal.Referencia.DepositarRequestBody();
-            inValue.Body.Cui = Cui;
-            inValue.Body.retiro = retiro;
-            Banquetzal.Referencia.DepositarResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).Depositar(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.DepositarResponse> Banquetzal.Referencia.WSGestionCIndividual.DepositarAsync(Banquetzal.Referencia.DepositarRequest request) {
-            return base.Channel.DepositarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.DepositarResponse> DepositarAsync(string Cui, int retiro) {
-            Banquetzal.Referencia.DepositarRequest inValue = new Banquetzal.Referencia.DepositarRequest();
-            inValue.Body = new Banquetzal.Referencia.DepositarRequestBody();
-            inValue.Body.Cui = Cui;
-            inValue.Body.retiro = retiro;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).DepositarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.RetirarResponse Banquetzal.Referencia.WSGestionCIndividual.Retirar(Banquetzal.Referencia.RetirarRequest request) {
-            return base.Channel.Retirar(request);
-        }
-        
-        public string Retirar(string Cui, int retiro) {
-            Banquetzal.Referencia.RetirarRequest inValue = new Banquetzal.Referencia.RetirarRequest();
-            inValue.Body = new Banquetzal.Referencia.RetirarRequestBody();
-            inValue.Body.Cui = Cui;
-            inValue.Body.retiro = retiro;
-            Banquetzal.Referencia.RetirarResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).Retirar(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.RetirarResponse> Banquetzal.Referencia.WSGestionCIndividual.RetirarAsync(Banquetzal.Referencia.RetirarRequest request) {
-            return base.Channel.RetirarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.RetirarResponse> RetirarAsync(string Cui, int retiro) {
-            Banquetzal.Referencia.RetirarRequest inValue = new Banquetzal.Referencia.RetirarRequest();
-            inValue.Body = new Banquetzal.Referencia.RetirarRequestBody();
-            inValue.Body.Cui = Cui;
-            inValue.Body.retiro = retiro;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RetirarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.LoginResponse Banquetzal.Referencia.WSGestionCIndividual.Login(Banquetzal.Referencia.LoginRequest request) {
-            return base.Channel.Login(request);
-        }
-        
-        public string Login(string Usuario, string Contraseña) {
-            Banquetzal.Referencia.LoginRequest inValue = new Banquetzal.Referencia.LoginRequest();
-            inValue.Body = new Banquetzal.Referencia.LoginRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            Banquetzal.Referencia.LoginResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).Login(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.LoginResponse> Banquetzal.Referencia.WSGestionCIndividual.LoginAsync(Banquetzal.Referencia.LoginRequest request) {
-            return base.Channel.LoginAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.LoginResponse> LoginAsync(string Usuario, string Contraseña) {
-            Banquetzal.Referencia.LoginRequest inValue = new Banquetzal.Referencia.LoginRequest();
-            inValue.Body = new Banquetzal.Referencia.LoginRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LoginAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.LogEmpleadoResponse Banquetzal.Referencia.WSGestionCIndividual.LogEmpleado(Banquetzal.Referencia.LogEmpleadoRequest request) {
-            return base.Channel.LogEmpleado(request);
-        }
-        
-        public string LogEmpleado(string Usuario, string Contra) {
-            Banquetzal.Referencia.LogEmpleadoRequest inValue = new Banquetzal.Referencia.LogEmpleadoRequest();
-            inValue.Body = new Banquetzal.Referencia.LogEmpleadoRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contra = Contra;
-            Banquetzal.Referencia.LogEmpleadoResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LogEmpleado(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpleadoResponse> Banquetzal.Referencia.WSGestionCIndividual.LogEmpleadoAsync(Banquetzal.Referencia.LogEmpleadoRequest request) {
-            return base.Channel.LogEmpleadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpleadoResponse> LogEmpleadoAsync(string Usuario, string Contra) {
-            Banquetzal.Referencia.LogEmpleadoRequest inValue = new Banquetzal.Referencia.LogEmpleadoRequest();
-            inValue.Body = new Banquetzal.Referencia.LogEmpleadoRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contra = Contra;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LogEmpleadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.AsignarANominResponse Banquetzal.Referencia.WSGestionCIndividual.AsignarANomin(Banquetzal.Referencia.AsignarANominRequest request) {
-            return base.Channel.AsignarANomin(request);
-        }
-        
-        public string AsignarANomin(int CodigoNomina, int Salario, string CuentaEmpleado, int CodigoEmpresa) {
-            Banquetzal.Referencia.AsignarANominRequest inValue = new Banquetzal.Referencia.AsignarANominRequest();
-            inValue.Body = new Banquetzal.Referencia.AsignarANominRequestBody();
-            inValue.Body.CodigoNomina = CodigoNomina;
-            inValue.Body.Salario = Salario;
-            inValue.Body.CuentaEmpleado = CuentaEmpleado;
-            inValue.Body.CodigoEmpresa = CodigoEmpresa;
-            Banquetzal.Referencia.AsignarANominResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).AsignarANomin(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.AsignarANominResponse> Banquetzal.Referencia.WSGestionCIndividual.AsignarANominAsync(Banquetzal.Referencia.AsignarANominRequest request) {
-            return base.Channel.AsignarANominAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.AsignarANominResponse> AsignarANominAsync(int CodigoNomina, int Salario, string CuentaEmpleado, int CodigoEmpresa) {
-            Banquetzal.Referencia.AsignarANominRequest inValue = new Banquetzal.Referencia.AsignarANominRequest();
-            inValue.Body = new Banquetzal.Referencia.AsignarANominRequestBody();
-            inValue.Body.CodigoNomina = CodigoNomina;
-            inValue.Body.Salario = Salario;
-            inValue.Body.CuentaEmpleado = CuentaEmpleado;
-            inValue.Body.CodigoEmpresa = CodigoEmpresa;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).AsignarANominAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.LogEmpresaResponse Banquetzal.Referencia.WSGestionCIndividual.LogEmpresa(Banquetzal.Referencia.LogEmpresaRequest request) {
-            return base.Channel.LogEmpresa(request);
-        }
-        
-        public string LogEmpresa(string Correo, string Telefono) {
-            Banquetzal.Referencia.LogEmpresaRequest inValue = new Banquetzal.Referencia.LogEmpresaRequest();
-            inValue.Body = new Banquetzal.Referencia.LogEmpresaRequestBody();
-            inValue.Body.Correo = Correo;
-            inValue.Body.Telefono = Telefono;
-            Banquetzal.Referencia.LogEmpresaResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LogEmpresa(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpresaResponse> Banquetzal.Referencia.WSGestionCIndividual.LogEmpresaAsync(Banquetzal.Referencia.LogEmpresaRequest request) {
-            return base.Channel.LogEmpresaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpresaResponse> LogEmpresaAsync(string Correo, string Telefono) {
-            Banquetzal.Referencia.LogEmpresaRequest inValue = new Banquetzal.Referencia.LogEmpresaRequest();
-            inValue.Body = new Banquetzal.Referencia.LogEmpresaRequestBody();
-            inValue.Body.Correo = Correo;
-            inValue.Body.Telefono = Telefono;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LogEmpresaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.CrearCuentaResponse Banquetzal.Referencia.WSGestionCIndividual.CrearCuenta(Banquetzal.Referencia.CrearCuentaRequest request) {
-            return base.Channel.CrearCuenta(request);
-        }
-        
-        public string CrearCuenta(int NOCuenta, int Saldo, string Estado, string ClienteID, int TipoC) {
-            Banquetzal.Referencia.CrearCuentaRequest inValue = new Banquetzal.Referencia.CrearCuentaRequest();
-            inValue.Body = new Banquetzal.Referencia.CrearCuentaRequestBody();
-            inValue.Body.NOCuenta = NOCuenta;
-            inValue.Body.Saldo = Saldo;
-            inValue.Body.Estado = Estado;
-            inValue.Body.ClienteID = ClienteID;
-            inValue.Body.TipoC = TipoC;
-            Banquetzal.Referencia.CrearCuentaResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CrearCuenta(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CrearCuentaResponse> Banquetzal.Referencia.WSGestionCIndividual.CrearCuentaAsync(Banquetzal.Referencia.CrearCuentaRequest request) {
-            return base.Channel.CrearCuentaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.CrearCuentaResponse> CrearCuentaAsync(int NOCuenta, int Saldo, string Estado, string ClienteID, int TipoC) {
-            Banquetzal.Referencia.CrearCuentaRequest inValue = new Banquetzal.Referencia.CrearCuentaRequest();
-            inValue.Body = new Banquetzal.Referencia.CrearCuentaRequestBody();
-            inValue.Body.NOCuenta = NOCuenta;
-            inValue.Body.Saldo = Saldo;
-            inValue.Body.Estado = Estado;
-            inValue.Body.ClienteID = ClienteID;
-            inValue.Body.TipoC = TipoC;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CrearCuentaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.RegistrarTrabajadorResponse Banquetzal.Referencia.WSGestionCIndividual.RegistrarTrabajador(Banquetzal.Referencia.RegistrarTrabajadorRequest request) {
-            return base.Channel.RegistrarTrabajador(request);
-        }
-        
-        public string RegistrarTrabajador(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña, int Rol, int Agencia) {
-            Banquetzal.Referencia.RegistrarTrabajadorRequest inValue = new Banquetzal.Referencia.RegistrarTrabajadorRequest();
-            inValue.Body = new Banquetzal.Referencia.RegistrarTrabajadorRequestBody();
-            inValue.Body.CUI = CUI;
-            inValue.Body.Nombre = Nombre;
-            inValue.Body.Apellido = Apellido;
-            inValue.Body.FechaNac = FechaNac;
-            inValue.Body.Telefono = Telefono;
-            inValue.Body.Correo = Correo;
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            inValue.Body.Rol = Rol;
-            inValue.Body.Agencia = Agencia;
-            Banquetzal.Referencia.RegistrarTrabajadorResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarTrabajador(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarTrabajadorResponse> Banquetzal.Referencia.WSGestionCIndividual.RegistrarTrabajadorAsync(Banquetzal.Referencia.RegistrarTrabajadorRequest request) {
-            return base.Channel.RegistrarTrabajadorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarTrabajadorResponse> RegistrarTrabajadorAsync(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña, int Rol, int Agencia) {
-            Banquetzal.Referencia.RegistrarTrabajadorRequest inValue = new Banquetzal.Referencia.RegistrarTrabajadorRequest();
-            inValue.Body = new Banquetzal.Referencia.RegistrarTrabajadorRequestBody();
-            inValue.Body.CUI = CUI;
-            inValue.Body.Nombre = Nombre;
-            inValue.Body.Apellido = Apellido;
-            inValue.Body.FechaNac = FechaNac;
-            inValue.Body.Telefono = Telefono;
-            inValue.Body.Correo = Correo;
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            inValue.Body.Rol = Rol;
-            inValue.Body.Agencia = Agencia;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarTrabajadorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.InsertarAgenciaResponse Banquetzal.Referencia.WSGestionCIndividual.InsertarAgencia(Banquetzal.Referencia.InsertarAgenciaRequest request) {
-            return base.Channel.InsertarAgencia(request);
-        }
-        
-        public string InsertarAgencia(int Codigo, string Direccion, string Telefono, string HApertura, string HCierre) {
-            Banquetzal.Referencia.InsertarAgenciaRequest inValue = new Banquetzal.Referencia.InsertarAgenciaRequest();
-            inValue.Body = new Banquetzal.Referencia.InsertarAgenciaRequestBody();
-            inValue.Body.Codigo = Codigo;
-            inValue.Body.Direccion = Direccion;
-            inValue.Body.Telefono = Telefono;
-            inValue.Body.HApertura = HApertura;
-            inValue.Body.HCierre = HCierre;
-            Banquetzal.Referencia.InsertarAgenciaResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).InsertarAgencia(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.InsertarAgenciaResponse> Banquetzal.Referencia.WSGestionCIndividual.InsertarAgenciaAsync(Banquetzal.Referencia.InsertarAgenciaRequest request) {
-            return base.Channel.InsertarAgenciaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.InsertarAgenciaResponse> InsertarAgenciaAsync(int Codigo, string Direccion, string Telefono, string HApertura, string HCierre) {
-            Banquetzal.Referencia.InsertarAgenciaRequest inValue = new Banquetzal.Referencia.InsertarAgenciaRequest();
-            inValue.Body = new Banquetzal.Referencia.InsertarAgenciaRequestBody();
-            inValue.Body.Codigo = Codigo;
-            inValue.Body.Direccion = Direccion;
-            inValue.Body.Telefono = Telefono;
-            inValue.Body.HApertura = HApertura;
-            inValue.Body.HCierre = HCierre;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).InsertarAgenciaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.CambiarContraIndiResponse Banquetzal.Referencia.WSGestionCIndividual.CambiarContraIndi(Banquetzal.Referencia.CambiarContraIndiRequest request) {
-            return base.Channel.CambiarContraIndi(request);
-        }
-        
-        public bool CambiarContraIndi(string Usuario, string Contraseña) {
-            Banquetzal.Referencia.CambiarContraIndiRequest inValue = new Banquetzal.Referencia.CambiarContraIndiRequest();
-            inValue.Body = new Banquetzal.Referencia.CambiarContraIndiRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            Banquetzal.Referencia.CambiarContraIndiResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraIndi(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraIndiResponse> Banquetzal.Referencia.WSGestionCIndividual.CambiarContraIndiAsync(Banquetzal.Referencia.CambiarContraIndiRequest request) {
-            return base.Channel.CambiarContraIndiAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraIndiResponse> CambiarContraIndiAsync(string Usuario, string Contraseña) {
-            Banquetzal.Referencia.CambiarContraIndiRequest inValue = new Banquetzal.Referencia.CambiarContraIndiRequest();
-            inValue.Body = new Banquetzal.Referencia.CambiarContraIndiRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraIndiAsync(inValue);
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.ObtenerPremiosResponse> ObtenerPremiosAsync() {
+            Banquetzal.Referencia.ObtenerPremiosRequest inValue = new Banquetzal.Referencia.ObtenerPremiosRequest();
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).ObtenerPremiosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1918,13 +1533,12 @@ namespace Banquetzal.Referencia {
         
         public string InsertarEmpresa(string CodigoEmpresa, string Nombre, string Telefono, string Correo) {
             Banquetzal.Referencia.InsertarEmpresaRequest inValue = new Banquetzal.Referencia.InsertarEmpresaRequest();
-            inValue.Body = new Banquetzal.Referencia.InsertarEmpresaRequestBody();
-            inValue.Body.CodigoEmpresa = CodigoEmpresa;
-            inValue.Body.Nombre = Nombre;
-            inValue.Body.Telefono = Telefono;
-            inValue.Body.Correo = Correo;
+            inValue.CodigoEmpresa = CodigoEmpresa;
+            inValue.Nombre = Nombre;
+            inValue.Telefono = Telefono;
+            inValue.Correo = Correo;
             Banquetzal.Referencia.InsertarEmpresaResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).InsertarEmpresa(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1934,66 +1548,42 @@ namespace Banquetzal.Referencia {
         
         public System.Threading.Tasks.Task<Banquetzal.Referencia.InsertarEmpresaResponse> InsertarEmpresaAsync(string CodigoEmpresa, string Nombre, string Telefono, string Correo) {
             Banquetzal.Referencia.InsertarEmpresaRequest inValue = new Banquetzal.Referencia.InsertarEmpresaRequest();
-            inValue.Body = new Banquetzal.Referencia.InsertarEmpresaRequestBody();
-            inValue.Body.CodigoEmpresa = CodigoEmpresa;
-            inValue.Body.Nombre = Nombre;
-            inValue.Body.Telefono = Telefono;
-            inValue.Body.Correo = Correo;
+            inValue.CodigoEmpresa = CodigoEmpresa;
+            inValue.Nombre = Nombre;
+            inValue.Telefono = Telefono;
+            inValue.Correo = Correo;
             return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).InsertarEmpresaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.CambiarContraNomiResponse Banquetzal.Referencia.WSGestionCIndividual.CambiarContraNomi(Banquetzal.Referencia.CambiarContraNomiRequest request) {
-            return base.Channel.CambiarContraNomi(request);
+        Banquetzal.Referencia.InsertarAgenciaResponse Banquetzal.Referencia.WSGestionCIndividual.InsertarAgencia(Banquetzal.Referencia.InsertarAgenciaRequest request) {
+            return base.Channel.InsertarAgencia(request);
         }
         
-        public bool CambiarContraNomi(string Usuario, string Contraseña) {
-            Banquetzal.Referencia.CambiarContraNomiRequest inValue = new Banquetzal.Referencia.CambiarContraNomiRequest();
-            inValue.Body = new Banquetzal.Referencia.CambiarContraNomiRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            Banquetzal.Referencia.CambiarContraNomiResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraNomi(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraNomiResponse> Banquetzal.Referencia.WSGestionCIndividual.CambiarContraNomiAsync(Banquetzal.Referencia.CambiarContraNomiRequest request) {
-            return base.Channel.CambiarContraNomiAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraNomiResponse> CambiarContraNomiAsync(string Usuario, string Contraseña) {
-            Banquetzal.Referencia.CambiarContraNomiRequest inValue = new Banquetzal.Referencia.CambiarContraNomiRequest();
-            inValue.Body = new Banquetzal.Referencia.CambiarContraNomiRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraNomiAsync(inValue);
+        public string InsertarAgencia(int Codigo, string Direccion, string Telefono, string HApertura, string HCierre) {
+            Banquetzal.Referencia.InsertarAgenciaRequest inValue = new Banquetzal.Referencia.InsertarAgenciaRequest();
+            inValue.Codigo = Codigo;
+            inValue.Direccion = Direccion;
+            inValue.Telefono = Telefono;
+            inValue.HApertura = HApertura;
+            inValue.HCierre = HCierre;
+            Banquetzal.Referencia.InsertarAgenciaResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).InsertarAgencia(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.CambiarContraEmpResponse Banquetzal.Referencia.WSGestionCIndividual.CambiarContraEmp(Banquetzal.Referencia.CambiarContraEmpRequest request) {
-            return base.Channel.CambiarContraEmp(request);
+        System.Threading.Tasks.Task<Banquetzal.Referencia.InsertarAgenciaResponse> Banquetzal.Referencia.WSGestionCIndividual.InsertarAgenciaAsync(Banquetzal.Referencia.InsertarAgenciaRequest request) {
+            return base.Channel.InsertarAgenciaAsync(request);
         }
         
-        public bool CambiarContraEmp(string Usuario, string Contraseña) {
-            Banquetzal.Referencia.CambiarContraEmpRequest inValue = new Banquetzal.Referencia.CambiarContraEmpRequest();
-            inValue.Body = new Banquetzal.Referencia.CambiarContraEmpRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            Banquetzal.Referencia.CambiarContraEmpResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraEmp(inValue);
-            return retVal.Body.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraEmpResponse> Banquetzal.Referencia.WSGestionCIndividual.CambiarContraEmpAsync(Banquetzal.Referencia.CambiarContraEmpRequest request) {
-            return base.Channel.CambiarContraEmpAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraEmpResponse> CambiarContraEmpAsync(string Usuario, string Contraseña) {
-            Banquetzal.Referencia.CambiarContraEmpRequest inValue = new Banquetzal.Referencia.CambiarContraEmpRequest();
-            inValue.Body = new Banquetzal.Referencia.CambiarContraEmpRequestBody();
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraEmpAsync(inValue);
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.InsertarAgenciaResponse> InsertarAgenciaAsync(int Codigo, string Direccion, string Telefono, string HApertura, string HCierre) {
+            Banquetzal.Referencia.InsertarAgenciaRequest inValue = new Banquetzal.Referencia.InsertarAgenciaRequest();
+            inValue.Codigo = Codigo;
+            inValue.Direccion = Direccion;
+            inValue.Telefono = Telefono;
+            inValue.HApertura = HApertura;
+            inValue.HCierre = HCierre;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).InsertarAgenciaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2003,17 +1593,16 @@ namespace Banquetzal.Referencia {
         
         public string RegistrarUsuarioIndi(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña) {
             Banquetzal.Referencia.RegistrarUsuarioIndiRequest inValue = new Banquetzal.Referencia.RegistrarUsuarioIndiRequest();
-            inValue.Body = new Banquetzal.Referencia.RegistrarUsuarioIndiRequestBody();
-            inValue.Body.CUI = CUI;
-            inValue.Body.Nombre = Nombre;
-            inValue.Body.Apellido = Apellido;
-            inValue.Body.FechaNac = FechaNac;
-            inValue.Body.Telefono = Telefono;
-            inValue.Body.Correo = Correo;
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
+            inValue.CUI = CUI;
+            inValue.Nombre = Nombre;
+            inValue.Apellido = Apellido;
+            inValue.FechaNac = FechaNac;
+            inValue.Telefono = Telefono;
+            inValue.Correo = Correo;
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
             Banquetzal.Referencia.RegistrarUsuarioIndiResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarUsuarioIndi(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2023,43 +1612,133 @@ namespace Banquetzal.Referencia {
         
         public System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarUsuarioIndiResponse> RegistrarUsuarioIndiAsync(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña) {
             Banquetzal.Referencia.RegistrarUsuarioIndiRequest inValue = new Banquetzal.Referencia.RegistrarUsuarioIndiRequest();
-            inValue.Body = new Banquetzal.Referencia.RegistrarUsuarioIndiRequestBody();
-            inValue.Body.CUI = CUI;
-            inValue.Body.Nombre = Nombre;
-            inValue.Body.Apellido = Apellido;
-            inValue.Body.FechaNac = FechaNac;
-            inValue.Body.Telefono = Telefono;
-            inValue.Body.Correo = Correo;
-            inValue.Body.Usuario = Usuario;
-            inValue.Body.Contraseña = Contraseña;
+            inValue.CUI = CUI;
+            inValue.Nombre = Nombre;
+            inValue.Apellido = Apellido;
+            inValue.FechaNac = FechaNac;
+            inValue.Telefono = Telefono;
+            inValue.Correo = Correo;
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
             return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarUsuarioIndiAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Banquetzal.Referencia.CrearChequeraResponse Banquetzal.Referencia.WSGestionCIndividual.CrearChequera(Banquetzal.Referencia.CrearChequeraRequest request) {
-            return base.Channel.CrearChequera(request);
+        Banquetzal.Referencia.RegistrarTrabajadorResponse Banquetzal.Referencia.WSGestionCIndividual.RegistrarTrabajador(Banquetzal.Referencia.RegistrarTrabajadorRequest request) {
+            return base.Channel.RegistrarTrabajador(request);
         }
         
-        public string CrearChequera(string Correlativo, int noCuenta) {
-            Banquetzal.Referencia.CrearChequeraRequest inValue = new Banquetzal.Referencia.CrearChequeraRequest();
-            inValue.Body = new Banquetzal.Referencia.CrearChequeraRequestBody();
-            inValue.Body.Correlativo = Correlativo;
-            inValue.Body.noCuenta = noCuenta;
-            Banquetzal.Referencia.CrearChequeraResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CrearChequera(inValue);
-            return retVal.Body.@return;
+        public string RegistrarTrabajador(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña, int Rol, int Agencia) {
+            Banquetzal.Referencia.RegistrarTrabajadorRequest inValue = new Banquetzal.Referencia.RegistrarTrabajadorRequest();
+            inValue.CUI = CUI;
+            inValue.Nombre = Nombre;
+            inValue.Apellido = Apellido;
+            inValue.FechaNac = FechaNac;
+            inValue.Telefono = Telefono;
+            inValue.Correo = Correo;
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            inValue.Rol = Rol;
+            inValue.Agencia = Agencia;
+            Banquetzal.Referencia.RegistrarTrabajadorResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarTrabajador(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Banquetzal.Referencia.CrearChequeraResponse> Banquetzal.Referencia.WSGestionCIndividual.CrearChequeraAsync(Banquetzal.Referencia.CrearChequeraRequest request) {
-            return base.Channel.CrearChequeraAsync(request);
+        System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarTrabajadorResponse> Banquetzal.Referencia.WSGestionCIndividual.RegistrarTrabajadorAsync(Banquetzal.Referencia.RegistrarTrabajadorRequest request) {
+            return base.Channel.RegistrarTrabajadorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.CrearChequeraResponse> CrearChequeraAsync(string Correlativo, int noCuenta) {
-            Banquetzal.Referencia.CrearChequeraRequest inValue = new Banquetzal.Referencia.CrearChequeraRequest();
-            inValue.Body = new Banquetzal.Referencia.CrearChequeraRequestBody();
-            inValue.Body.Correlativo = Correlativo;
-            inValue.Body.noCuenta = noCuenta;
-            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CrearChequeraAsync(inValue);
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarTrabajadorResponse> RegistrarTrabajadorAsync(string CUI, string Nombre, string Apellido, string FechaNac, string Telefono, string Correo, string Usuario, string Contraseña, int Rol, int Agencia) {
+            Banquetzal.Referencia.RegistrarTrabajadorRequest inValue = new Banquetzal.Referencia.RegistrarTrabajadorRequest();
+            inValue.CUI = CUI;
+            inValue.Nombre = Nombre;
+            inValue.Apellido = Apellido;
+            inValue.FechaNac = FechaNac;
+            inValue.Telefono = Telefono;
+            inValue.Correo = Correo;
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            inValue.Rol = Rol;
+            inValue.Agencia = Agencia;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarTrabajadorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.DepositoTercerosResponse Banquetzal.Referencia.WSGestionCIndividual.DepositoTerceros(Banquetzal.Referencia.DepositoTercerosRequest request) {
+            return base.Channel.DepositoTerceros(request);
+        }
+        
+        public string DepositoTerceros(string NoCuenta, string NoCuentaDepositante, int Monto) {
+            Banquetzal.Referencia.DepositoTercerosRequest inValue = new Banquetzal.Referencia.DepositoTercerosRequest();
+            inValue.NoCuenta = NoCuenta;
+            inValue.NoCuentaDepositante = NoCuentaDepositante;
+            inValue.Monto = Monto;
+            Banquetzal.Referencia.DepositoTercerosResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).DepositoTerceros(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.DepositoTercerosResponse> Banquetzal.Referencia.WSGestionCIndividual.DepositoTercerosAsync(Banquetzal.Referencia.DepositoTercerosRequest request) {
+            return base.Channel.DepositoTercerosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.DepositoTercerosResponse> DepositoTercerosAsync(string NoCuenta, string NoCuentaDepositante, int Monto) {
+            Banquetzal.Referencia.DepositoTercerosRequest inValue = new Banquetzal.Referencia.DepositoTercerosRequest();
+            inValue.NoCuenta = NoCuenta;
+            inValue.NoCuentaDepositante = NoCuentaDepositante;
+            inValue.Monto = Monto;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).DepositoTercerosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.CambiarContraEmpResponse Banquetzal.Referencia.WSGestionCIndividual.CambiarContraEmp(Banquetzal.Referencia.CambiarContraEmpRequest request) {
+            return base.Channel.CambiarContraEmp(request);
+        }
+        
+        public bool CambiarContraEmp(string Usuario, string Contraseña) {
+            Banquetzal.Referencia.CambiarContraEmpRequest inValue = new Banquetzal.Referencia.CambiarContraEmpRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            Banquetzal.Referencia.CambiarContraEmpResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraEmp(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraEmpResponse> Banquetzal.Referencia.WSGestionCIndividual.CambiarContraEmpAsync(Banquetzal.Referencia.CambiarContraEmpRequest request) {
+            return base.Channel.CambiarContraEmpAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraEmpResponse> CambiarContraEmpAsync(string Usuario, string Contraseña) {
+            Banquetzal.Referencia.CambiarContraEmpRequest inValue = new Banquetzal.Referencia.CambiarContraEmpRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraEmpAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.CambiarContraIndiResponse Banquetzal.Referencia.WSGestionCIndividual.CambiarContraIndi(Banquetzal.Referencia.CambiarContraIndiRequest request) {
+            return base.Channel.CambiarContraIndi(request);
+        }
+        
+        public bool CambiarContraIndi(string Usuario, string Contraseña) {
+            Banquetzal.Referencia.CambiarContraIndiRequest inValue = new Banquetzal.Referencia.CambiarContraIndiRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            Banquetzal.Referencia.CambiarContraIndiResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraIndi(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraIndiResponse> Banquetzal.Referencia.WSGestionCIndividual.CambiarContraIndiAsync(Banquetzal.Referencia.CambiarContraIndiRequest request) {
+            return base.Channel.CambiarContraIndiAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraIndiResponse> CambiarContraIndiAsync(string Usuario, string Contraseña) {
+            Banquetzal.Referencia.CambiarContraIndiRequest inValue = new Banquetzal.Referencia.CambiarContraIndiRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraIndiAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2086,21 +1765,368 @@ namespace Banquetzal.Referencia {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.RegistrarProveedorResponse Banquetzal.Referencia.WSGestionCIndividual.RegistrarProveedor(Banquetzal.Referencia.RegistrarProveedorRequest request) {
+            return base.Channel.RegistrarProveedor(request);
+        }
+        
+        public string RegistrarProveedor(string nombre, int telefono, string correo) {
+            Banquetzal.Referencia.RegistrarProveedorRequest inValue = new Banquetzal.Referencia.RegistrarProveedorRequest();
+            inValue.nombre = nombre;
+            inValue.telefono = telefono;
+            inValue.correo = correo;
+            Banquetzal.Referencia.RegistrarProveedorResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarProveedor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarProveedorResponse> Banquetzal.Referencia.WSGestionCIndividual.RegistrarProveedorAsync(Banquetzal.Referencia.RegistrarProveedorRequest request) {
+            return base.Channel.RegistrarProveedorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarProveedorResponse> RegistrarProveedorAsync(string nombre, int telefono, string correo) {
+            Banquetzal.Referencia.RegistrarProveedorRequest inValue = new Banquetzal.Referencia.RegistrarProveedorRequest();
+            inValue.nombre = nombre;
+            inValue.telefono = telefono;
+            inValue.correo = correo;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarProveedorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.RegistrarPremioResponse Banquetzal.Referencia.WSGestionCIndividual.RegistrarPremio(Banquetzal.Referencia.RegistrarPremioRequest request) {
+            return base.Channel.RegistrarPremio(request);
+        }
+        
+        public string RegistrarPremio(string Nombre, int Valor, int existencia) {
+            Banquetzal.Referencia.RegistrarPremioRequest inValue = new Banquetzal.Referencia.RegistrarPremioRequest();
+            inValue.Nombre = Nombre;
+            inValue.Valor = Valor;
+            inValue.existencia = existencia;
+            Banquetzal.Referencia.RegistrarPremioResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarPremio(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarPremioResponse> Banquetzal.Referencia.WSGestionCIndividual.RegistrarPremioAsync(Banquetzal.Referencia.RegistrarPremioRequest request) {
+            return base.Channel.RegistrarPremioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.RegistrarPremioResponse> RegistrarPremioAsync(string Nombre, int Valor, int existencia) {
+            Banquetzal.Referencia.RegistrarPremioRequest inValue = new Banquetzal.Referencia.RegistrarPremioRequest();
+            inValue.Nombre = Nombre;
+            inValue.Valor = Valor;
+            inValue.existencia = existencia;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RegistrarPremioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.SolicitudProveedoresResponse Banquetzal.Referencia.WSGestionCIndividual.SolicitudProveedores(Banquetzal.Referencia.SolicitudProveedoresRequest request) {
+            return base.Channel.SolicitudProveedores(request);
+        }
+        
+        public string SolicitudProveedores(string premio, string proveedor) {
+            Banquetzal.Referencia.SolicitudProveedoresRequest inValue = new Banquetzal.Referencia.SolicitudProveedoresRequest();
+            inValue.premio = premio;
+            inValue.proveedor = proveedor;
+            Banquetzal.Referencia.SolicitudProveedoresResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).SolicitudProveedores(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.SolicitudProveedoresResponse> Banquetzal.Referencia.WSGestionCIndividual.SolicitudProveedoresAsync(Banquetzal.Referencia.SolicitudProveedoresRequest request) {
+            return base.Channel.SolicitudProveedoresAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.SolicitudProveedoresResponse> SolicitudProveedoresAsync(string premio, string proveedor) {
+            Banquetzal.Referencia.SolicitudProveedoresRequest inValue = new Banquetzal.Referencia.SolicitudProveedoresRequest();
+            inValue.premio = premio;
+            inValue.proveedor = proveedor;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).SolicitudProveedoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.CambiarContraNomiResponse Banquetzal.Referencia.WSGestionCIndividual.CambiarContraNomi(Banquetzal.Referencia.CambiarContraNomiRequest request) {
+            return base.Channel.CambiarContraNomi(request);
+        }
+        
+        public bool CambiarContraNomi(string Usuario, string Contraseña) {
+            Banquetzal.Referencia.CambiarContraNomiRequest inValue = new Banquetzal.Referencia.CambiarContraNomiRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            Banquetzal.Referencia.CambiarContraNomiResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraNomi(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraNomiResponse> Banquetzal.Referencia.WSGestionCIndividual.CambiarContraNomiAsync(Banquetzal.Referencia.CambiarContraNomiRequest request) {
+            return base.Channel.CambiarContraNomiAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.CambiarContraNomiResponse> CambiarContraNomiAsync(string Usuario, string Contraseña) {
+            Banquetzal.Referencia.CambiarContraNomiRequest inValue = new Banquetzal.Referencia.CambiarContraNomiRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CambiarContraNomiAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.ReportePuntosResponse Banquetzal.Referencia.WSGestionCIndividual.ReportePuntos(Banquetzal.Referencia.ReportePuntosRequest request) {
+            return base.Channel.ReportePuntos(request);
+        }
+        
+        public string ReportePuntos(int noCuenta) {
+            Banquetzal.Referencia.ReportePuntosRequest inValue = new Banquetzal.Referencia.ReportePuntosRequest();
+            inValue.noCuenta = noCuenta;
+            Banquetzal.Referencia.ReportePuntosResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).ReportePuntos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.ReportePuntosResponse> Banquetzal.Referencia.WSGestionCIndividual.ReportePuntosAsync(Banquetzal.Referencia.ReportePuntosRequest request) {
+            return base.Channel.ReportePuntosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.ReportePuntosResponse> ReportePuntosAsync(int noCuenta) {
+            Banquetzal.Referencia.ReportePuntosRequest inValue = new Banquetzal.Referencia.ReportePuntosRequest();
+            inValue.noCuenta = noCuenta;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).ReportePuntosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.LogEmpleadoResponse Banquetzal.Referencia.WSGestionCIndividual.LogEmpleado(Banquetzal.Referencia.LogEmpleadoRequest request) {
+            return base.Channel.LogEmpleado(request);
+        }
+        
+        public string LogEmpleado(string Usuario, string Contra) {
+            Banquetzal.Referencia.LogEmpleadoRequest inValue = new Banquetzal.Referencia.LogEmpleadoRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contra = Contra;
+            Banquetzal.Referencia.LogEmpleadoResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LogEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpleadoResponse> Banquetzal.Referencia.WSGestionCIndividual.LogEmpleadoAsync(Banquetzal.Referencia.LogEmpleadoRequest request) {
+            return base.Channel.LogEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpleadoResponse> LogEmpleadoAsync(string Usuario, string Contra) {
+            Banquetzal.Referencia.LogEmpleadoRequest inValue = new Banquetzal.Referencia.LogEmpleadoRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contra = Contra;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LogEmpleadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.AsignarANominResponse Banquetzal.Referencia.WSGestionCIndividual.AsignarANomin(Banquetzal.Referencia.AsignarANominRequest request) {
+            return base.Channel.AsignarANomin(request);
+        }
+        
+        public string AsignarANomin(int CodigoNomina, int Salario, string CuentaEmpleado, int CodigoEmpresa) {
+            Banquetzal.Referencia.AsignarANominRequest inValue = new Banquetzal.Referencia.AsignarANominRequest();
+            inValue.CodigoNomina = CodigoNomina;
+            inValue.Salario = Salario;
+            inValue.CuentaEmpleado = CuentaEmpleado;
+            inValue.CodigoEmpresa = CodigoEmpresa;
+            Banquetzal.Referencia.AsignarANominResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).AsignarANomin(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.AsignarANominResponse> Banquetzal.Referencia.WSGestionCIndividual.AsignarANominAsync(Banquetzal.Referencia.AsignarANominRequest request) {
+            return base.Channel.AsignarANominAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.AsignarANominResponse> AsignarANominAsync(int CodigoNomina, int Salario, string CuentaEmpleado, int CodigoEmpresa) {
+            Banquetzal.Referencia.AsignarANominRequest inValue = new Banquetzal.Referencia.AsignarANominRequest();
+            inValue.CodigoNomina = CodigoNomina;
+            inValue.Salario = Salario;
+            inValue.CuentaEmpleado = CuentaEmpleado;
+            inValue.CodigoEmpresa = CodigoEmpresa;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).AsignarANominAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.LoginResponse Banquetzal.Referencia.WSGestionCIndividual.Login(Banquetzal.Referencia.LoginRequest request) {
+            return base.Channel.Login(request);
+        }
+        
+        public string Login(string Usuario, string Contraseña) {
+            Banquetzal.Referencia.LoginRequest inValue = new Banquetzal.Referencia.LoginRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            Banquetzal.Referencia.LoginResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).Login(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.LoginResponse> Banquetzal.Referencia.WSGestionCIndividual.LoginAsync(Banquetzal.Referencia.LoginRequest request) {
+            return base.Channel.LoginAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.LoginResponse> LoginAsync(string Usuario, string Contraseña) {
+            Banquetzal.Referencia.LoginRequest inValue = new Banquetzal.Referencia.LoginRequest();
+            inValue.Usuario = Usuario;
+            inValue.Contraseña = Contraseña;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LoginAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.RetirarResponse Banquetzal.Referencia.WSGestionCIndividual.Retirar(Banquetzal.Referencia.RetirarRequest request) {
+            return base.Channel.Retirar(request);
+        }
+        
+        public string Retirar(string Cui, int retiro, string Fecha) {
+            Banquetzal.Referencia.RetirarRequest inValue = new Banquetzal.Referencia.RetirarRequest();
+            inValue.Cui = Cui;
+            inValue.retiro = retiro;
+            inValue.Fecha = Fecha;
+            Banquetzal.Referencia.RetirarResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).Retirar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.RetirarResponse> Banquetzal.Referencia.WSGestionCIndividual.RetirarAsync(Banquetzal.Referencia.RetirarRequest request) {
+            return base.Channel.RetirarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.RetirarResponse> RetirarAsync(string Cui, int retiro, string Fecha) {
+            Banquetzal.Referencia.RetirarRequest inValue = new Banquetzal.Referencia.RetirarRequest();
+            inValue.Cui = Cui;
+            inValue.retiro = retiro;
+            inValue.Fecha = Fecha;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).RetirarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.PrestamoResponse Banquetzal.Referencia.WSGestionCIndividual.Prestamo(Banquetzal.Referencia.PrestamoRequest request) {
+            return base.Channel.Prestamo(request);
+        }
+        
+        public string Prestamo(int Cantidad, int noCuenta, string Estado, string Fecha) {
+            Banquetzal.Referencia.PrestamoRequest inValue = new Banquetzal.Referencia.PrestamoRequest();
+            inValue.Cantidad = Cantidad;
+            inValue.noCuenta = noCuenta;
+            inValue.Estado = Estado;
+            inValue.Fecha = Fecha;
+            Banquetzal.Referencia.PrestamoResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).Prestamo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.PrestamoResponse> Banquetzal.Referencia.WSGestionCIndividual.PrestamoAsync(Banquetzal.Referencia.PrestamoRequest request) {
+            return base.Channel.PrestamoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.PrestamoResponse> PrestamoAsync(int Cantidad, int noCuenta, string Estado, string Fecha) {
+            Banquetzal.Referencia.PrestamoRequest inValue = new Banquetzal.Referencia.PrestamoRequest();
+            inValue.Cantidad = Cantidad;
+            inValue.noCuenta = noCuenta;
+            inValue.Estado = Estado;
+            inValue.Fecha = Fecha;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).PrestamoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.CrearCuentaResponse Banquetzal.Referencia.WSGestionCIndividual.CrearCuenta(Banquetzal.Referencia.CrearCuentaRequest request) {
+            return base.Channel.CrearCuenta(request);
+        }
+        
+        public string CrearCuenta(int NOCuenta, int Saldo, string Estado, string Fecha, string ClienteID, int TipoC) {
+            Banquetzal.Referencia.CrearCuentaRequest inValue = new Banquetzal.Referencia.CrearCuentaRequest();
+            inValue.NOCuenta = NOCuenta;
+            inValue.Saldo = Saldo;
+            inValue.Estado = Estado;
+            inValue.Fecha = Fecha;
+            inValue.ClienteID = ClienteID;
+            inValue.TipoC = TipoC;
+            Banquetzal.Referencia.CrearCuentaResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CrearCuenta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CrearCuentaResponse> Banquetzal.Referencia.WSGestionCIndividual.CrearCuentaAsync(Banquetzal.Referencia.CrearCuentaRequest request) {
+            return base.Channel.CrearCuentaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.CrearCuentaResponse> CrearCuentaAsync(int NOCuenta, int Saldo, string Estado, string Fecha, string ClienteID, int TipoC) {
+            Banquetzal.Referencia.CrearCuentaRequest inValue = new Banquetzal.Referencia.CrearCuentaRequest();
+            inValue.NOCuenta = NOCuenta;
+            inValue.Saldo = Saldo;
+            inValue.Estado = Estado;
+            inValue.Fecha = Fecha;
+            inValue.ClienteID = ClienteID;
+            inValue.TipoC = TipoC;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CrearCuentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.LogEmpresaResponse Banquetzal.Referencia.WSGestionCIndividual.LogEmpresa(Banquetzal.Referencia.LogEmpresaRequest request) {
+            return base.Channel.LogEmpresa(request);
+        }
+        
+        public string LogEmpresa(string Correo, string Telefono) {
+            Banquetzal.Referencia.LogEmpresaRequest inValue = new Banquetzal.Referencia.LogEmpresaRequest();
+            inValue.Correo = Correo;
+            inValue.Telefono = Telefono;
+            Banquetzal.Referencia.LogEmpresaResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LogEmpresa(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpresaResponse> Banquetzal.Referencia.WSGestionCIndividual.LogEmpresaAsync(Banquetzal.Referencia.LogEmpresaRequest request) {
+            return base.Channel.LogEmpresaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.LogEmpresaResponse> LogEmpresaAsync(string Correo, string Telefono) {
+            Banquetzal.Referencia.LogEmpresaRequest inValue = new Banquetzal.Referencia.LogEmpresaRequest();
+            inValue.Correo = Correo;
+            inValue.Telefono = Telefono;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).LogEmpresaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.CrearChequeraResponse Banquetzal.Referencia.WSGestionCIndividual.CrearChequera(Banquetzal.Referencia.CrearChequeraRequest request) {
+            return base.Channel.CrearChequera(request);
+        }
+        
+        public string CrearChequera(string Correlativo, int noCuenta, string Fecha) {
+            Banquetzal.Referencia.CrearChequeraRequest inValue = new Banquetzal.Referencia.CrearChequeraRequest();
+            inValue.Correlativo = Correlativo;
+            inValue.noCuenta = noCuenta;
+            inValue.Fecha = Fecha;
+            Banquetzal.Referencia.CrearChequeraResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CrearChequera(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.CrearChequeraResponse> Banquetzal.Referencia.WSGestionCIndividual.CrearChequeraAsync(Banquetzal.Referencia.CrearChequeraRequest request) {
+            return base.Channel.CrearChequeraAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.CrearChequeraResponse> CrearChequeraAsync(string Correlativo, int noCuenta, string Fecha) {
+            Banquetzal.Referencia.CrearChequeraRequest inValue = new Banquetzal.Referencia.CrearChequeraRequest();
+            inValue.Correlativo = Correlativo;
+            inValue.noCuenta = noCuenta;
+            inValue.Fecha = Fecha;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).CrearChequeraAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Banquetzal.Referencia.ChequeResponse Banquetzal.Referencia.WSGestionCIndividual.Cheque(Banquetzal.Referencia.ChequeRequest request) {
             return base.Channel.Cheque(request);
         }
         
-        public string Cheque(int Correlativo, string nombre, int monto, string firma, int noCuenta, string Chequera) {
+        public string Cheque(int Correlativo, string nombre, int monto, string firma, int noCuenta, string Chequera, string Fecha) {
             Banquetzal.Referencia.ChequeRequest inValue = new Banquetzal.Referencia.ChequeRequest();
-            inValue.Body = new Banquetzal.Referencia.ChequeRequestBody();
-            inValue.Body.Correlativo = Correlativo;
-            inValue.Body.nombre = nombre;
-            inValue.Body.monto = monto;
-            inValue.Body.firma = firma;
-            inValue.Body.noCuenta = noCuenta;
-            inValue.Body.Chequera = Chequera;
+            inValue.Correlativo = Correlativo;
+            inValue.nombre = nombre;
+            inValue.monto = monto;
+            inValue.firma = firma;
+            inValue.noCuenta = noCuenta;
+            inValue.Chequera = Chequera;
+            inValue.Fecha = Fecha;
             Banquetzal.Referencia.ChequeResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).Cheque(inValue);
-            return retVal.Body.@return;
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2108,16 +2134,43 @@ namespace Banquetzal.Referencia {
             return base.Channel.ChequeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Banquetzal.Referencia.ChequeResponse> ChequeAsync(int Correlativo, string nombre, int monto, string firma, int noCuenta, string Chequera) {
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.ChequeResponse> ChequeAsync(int Correlativo, string nombre, int monto, string firma, int noCuenta, string Chequera, string Fecha) {
             Banquetzal.Referencia.ChequeRequest inValue = new Banquetzal.Referencia.ChequeRequest();
-            inValue.Body = new Banquetzal.Referencia.ChequeRequestBody();
-            inValue.Body.Correlativo = Correlativo;
-            inValue.Body.nombre = nombre;
-            inValue.Body.monto = monto;
-            inValue.Body.firma = firma;
-            inValue.Body.noCuenta = noCuenta;
-            inValue.Body.Chequera = Chequera;
+            inValue.Correlativo = Correlativo;
+            inValue.nombre = nombre;
+            inValue.monto = monto;
+            inValue.firma = firma;
+            inValue.noCuenta = noCuenta;
+            inValue.Chequera = Chequera;
+            inValue.Fecha = Fecha;
             return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).ChequeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.DepositarResponse Banquetzal.Referencia.WSGestionCIndividual.Depositar(Banquetzal.Referencia.DepositarRequest request) {
+            return base.Channel.Depositar(request);
+        }
+        
+        public string Depositar(string Cui, int retiro, string Fecha) {
+            Banquetzal.Referencia.DepositarRequest inValue = new Banquetzal.Referencia.DepositarRequest();
+            inValue.Cui = Cui;
+            inValue.retiro = retiro;
+            inValue.Fecha = Fecha;
+            Banquetzal.Referencia.DepositarResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).Depositar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.DepositarResponse> Banquetzal.Referencia.WSGestionCIndividual.DepositarAsync(Banquetzal.Referencia.DepositarRequest request) {
+            return base.Channel.DepositarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.DepositarResponse> DepositarAsync(string Cui, int retiro, string Fecha) {
+            Banquetzal.Referencia.DepositarRequest inValue = new Banquetzal.Referencia.DepositarRequest();
+            inValue.Cui = Cui;
+            inValue.retiro = retiro;
+            inValue.Fecha = Fecha;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).DepositarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2141,6 +2194,31 @@ namespace Banquetzal.Referencia {
             Banquetzal.Referencia.EstadoCRetiroRequest inValue = new Banquetzal.Referencia.EstadoCRetiroRequest();
             inValue.noCuenta = noCuenta;
             return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).EstadoCRetiroAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Banquetzal.Referencia.ComprarProductoResponse Banquetzal.Referencia.WSGestionCIndividual.ComprarProducto(Banquetzal.Referencia.ComprarProductoRequest request) {
+            return base.Channel.ComprarProducto(request);
+        }
+        
+        public string ComprarProducto(string noCuenta, string Premio) {
+            Banquetzal.Referencia.ComprarProductoRequest inValue = new Banquetzal.Referencia.ComprarProductoRequest();
+            inValue.noCuenta = noCuenta;
+            inValue.Premio = Premio;
+            Banquetzal.Referencia.ComprarProductoResponse retVal = ((Banquetzal.Referencia.WSGestionCIndividual)(this)).ComprarProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Banquetzal.Referencia.ComprarProductoResponse> Banquetzal.Referencia.WSGestionCIndividual.ComprarProductoAsync(Banquetzal.Referencia.ComprarProductoRequest request) {
+            return base.Channel.ComprarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Banquetzal.Referencia.ComprarProductoResponse> ComprarProductoAsync(string noCuenta, string Premio) {
+            Banquetzal.Referencia.ComprarProductoRequest inValue = new Banquetzal.Referencia.ComprarProductoRequest();
+            inValue.noCuenta = noCuenta;
+            inValue.Premio = Premio;
+            return ((Banquetzal.Referencia.WSGestionCIndividual)(this)).ComprarProductoAsync(inValue);
         }
     }
 }

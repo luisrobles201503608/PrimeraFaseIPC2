@@ -17,7 +17,7 @@ namespace Banquetzal
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            refe.Prestamo(int.Parse(TextBox1.Text), int.Parse(TextBox2.Text));
+            refe.Prestamo(int.Parse(TextBox1.Text), int.Parse(TextBox2.Text),"pendiente",TextBox3.Text);
             TextBox1.Text = "";
             TextBox2.Text = "";
         }

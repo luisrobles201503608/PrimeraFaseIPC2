@@ -10,12 +10,16 @@
   <xs:element name="CambiarContraNomiResponse" type="tns:CambiarContraNomiResponse" />
   <xs:element name="Cheque" type="tns:Cheque" />
   <xs:element name="ChequeResponse" type="tns:ChequeResponse" />
+  <xs:element name="ComprarProducto" type="tns:ComprarProducto" />
+  <xs:element name="ComprarProductoResponse" type="tns:ComprarProductoResponse" />
   <xs:element name="CrearChequera" type="tns:CrearChequera" />
   <xs:element name="CrearChequeraResponse" type="tns:CrearChequeraResponse" />
   <xs:element name="CrearCuenta" type="tns:CrearCuenta" />
   <xs:element name="CrearCuentaResponse" type="tns:CrearCuentaResponse" />
   <xs:element name="Depositar" type="tns:Depositar" />
   <xs:element name="DepositarResponse" type="tns:DepositarResponse" />
+  <xs:element name="DepositoTerceros" type="tns:DepositoTerceros" />
+  <xs:element name="DepositoTercerosResponse" type="tns:DepositoTercerosResponse" />
   <xs:element name="EstadoCDeposito" type="tns:EstadoCDeposito" />
   <xs:element name="EstadoCDepositoResponse" type="tns:EstadoCDepositoResponse" />
   <xs:element name="EstadoCRetiro" type="tns:EstadoCRetiro" />
@@ -30,24 +34,24 @@
   <xs:element name="LogEmpresaResponse" type="tns:LogEmpresaResponse" />
   <xs:element name="Login" type="tns:Login" />
   <xs:element name="LoginResponse" type="tns:LoginResponse" />
+  <xs:element name="ObtenerPremios" type="tns:ObtenerPremios" />
+  <xs:element name="ObtenerPremiosResponse" type="tns:ObtenerPremiosResponse" />
   <xs:element name="Prestamo" type="tns:Prestamo" />
   <xs:element name="PrestamoResponse" type="tns:PrestamoResponse" />
+  <xs:element name="RegistrarPremio" type="tns:RegistrarPremio" />
+  <xs:element name="RegistrarPremioResponse" type="tns:RegistrarPremioResponse" />
+  <xs:element name="RegistrarProveedor" type="tns:RegistrarProveedor" />
+  <xs:element name="RegistrarProveedorResponse" type="tns:RegistrarProveedorResponse" />
   <xs:element name="RegistrarTrabajador" type="tns:RegistrarTrabajador" />
   <xs:element name="RegistrarTrabajadorResponse" type="tns:RegistrarTrabajadorResponse" />
   <xs:element name="RegistrarUsuarioIndi" type="tns:RegistrarUsuarioIndi" />
   <xs:element name="RegistrarUsuarioIndiResponse" type="tns:RegistrarUsuarioIndiResponse" />
+  <xs:element name="ReportePuntos" type="tns:ReportePuntos" />
+  <xs:element name="ReportePuntosResponse" type="tns:ReportePuntosResponse" />
   <xs:element name="Retirar" type="tns:Retirar" />
   <xs:element name="RetirarResponse" type="tns:RetirarResponse" />
-  <xs:complexType name="EstadoCDeposito">
-    <xs:sequence>
-      <xs:element name="noCuenta" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="EstadoCDepositoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
+  <xs:element name="SolicitudProveedores" type="tns:SolicitudProveedores" />
+  <xs:element name="SolicitudProveedoresResponse" type="tns:SolicitudProveedoresResponse" />
   <xs:complexType name="LogEmpleado">
     <xs:sequence>
       <xs:element minOccurs="0" name="Usuario" type="xs:string" />
@@ -55,17 +59,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="LogEmpleadoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="LogEmpresa">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Correo" type="xs:string" />
-      <xs:element minOccurs="0" name="Telefono" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="LogEmpresaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -84,24 +77,34 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="Retirar">
+  <xs:complexType name="DepositoTerceros">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Cui" type="xs:string" />
-      <xs:element name="retiro" type="xs:int" />
+      <xs:element minOccurs="0" name="NoCuenta" type="xs:string" />
+      <xs:element minOccurs="0" name="NoCuentaDepositante" type="xs:string" />
+      <xs:element name="Monto" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="RetirarResponse">
+  <xs:complexType name="DepositoTercerosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="CrearChequera">
+  <xs:complexType name="ObtenerPremios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ObtenerPremiosResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Correlativo" type="xs:string" />
-      <xs:element name="noCuenta" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="CrearChequeraResponse">
+  <xs:complexType name="Retirar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cui" type="xs:string" />
+      <xs:element name="retiro" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RetirarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -111,6 +114,7 @@
       <xs:element name="NOCuenta" type="xs:int" />
       <xs:element name="Saldo" type="xs:int" />
       <xs:element minOccurs="0" name="Estado" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:string" />
       <xs:element minOccurs="0" name="ClienteID" type="xs:string" />
       <xs:element name="TipoC" type="xs:int" />
     </xs:sequence>
@@ -120,13 +124,12 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="Prestamo">
+  <xs:complexType name="ReportePuntos">
     <xs:sequence>
-      <xs:element name="Cantidad" type="xs:int" />
       <xs:element name="noCuenta" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="PrestamoResponse">
+  <xs:complexType name="ReportePuntosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -148,6 +151,110 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="ComprarProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="noCuenta" type="xs:string" />
+      <xs:element minOccurs="0" name="Premio" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ComprarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarEmpresa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoEmpresa" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="Correo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InsertarEmpresaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CambiarContraNomi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Contraseña" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CambiarContraNomiResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EstadoCDeposito">
+    <xs:sequence>
+      <xs:element name="noCuenta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EstadoCDepositoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogEmpresa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Correo" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogEmpresaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SolicitudProveedores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="premio" type="xs:string" />
+      <xs:element minOccurs="0" name="proveedor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SolicitudProveedoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearChequera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Correlativo" type="xs:string" />
+      <xs:element name="noCuenta" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearChequeraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Prestamo">
+    <xs:sequence>
+      <xs:element name="Cantidad" type="xs:int" />
+      <xs:element name="noCuenta" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PrestamoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarProveedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarProveedorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="EstadoCRetiro">
     <xs:sequence>
       <xs:element name="noCuenta" type="xs:int" />
@@ -158,6 +265,18 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="RegistrarPremio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" type="xs:string" />
+      <xs:element name="Valor" type="xs:int" />
+      <xs:element name="existencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarPremioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="Cheque">
     <xs:sequence>
       <xs:element name="Correlativo" type="xs:int" />
@@ -166,6 +285,7 @@
       <xs:element minOccurs="0" name="firma" type="xs:string" />
       <xs:element name="noCuenta" type="xs:int" />
       <xs:element minOccurs="0" name="Chequera" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ChequeResponse">
@@ -195,30 +315,6 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="CambiarContraNomi">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
-      <xs:element minOccurs="0" name="Contraseña" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="CambiarContraNomiResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="InsertarEmpresa">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CodigoEmpresa" type="xs:string" />
-      <xs:element minOccurs="0" name="Nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="Telefono" type="xs:string" />
-      <xs:element minOccurs="0" name="Correo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="InsertarEmpresaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="AsignarANomin">
     <xs:sequence>
       <xs:element name="CodigoNomina" type="xs:int" />
@@ -228,17 +324,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="AsignarANominResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Depositar">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Cui" type="xs:string" />
-      <xs:element name="retiro" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="DepositarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
@@ -258,6 +343,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="RegistrarTrabajadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Depositar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cui" type="xs:string" />
+      <xs:element name="retiro" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DepositarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>

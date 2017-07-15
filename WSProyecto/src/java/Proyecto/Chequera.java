@@ -36,4 +36,24 @@ public class Chequera {
         }
         return  respuesta;
 }
+    public String historial(int nocuenta,String descripcion,int monto,String fecha){
+        String respuesta=null;
+        Connection accesoDB = conexion.getConexion();
+        
+        try{
+            PreparedStatement ps = accesoDB.prepareStatement("insert into estadohistorial(nocuenta,descripcion,monto,fecha) values (?,?,?,?)");
+            ps.setInt(1, nocuenta);
+            ps.setString(2,descripcion);
+            ps.setInt(3,monto);
+            ps.setString(4,fecha);
+            int rs = ps.executeUpdate();
+            
+            if(rs>0){
+                respuesta="Registro exitoso.";
+            }
+        }catch(Exception e){
+            System.out.println("Registro no ingresado");
+        }
+        return  respuesta;
+}
 }

@@ -27,7 +27,7 @@
         <tr>
             <td style="width: 133px">Codigo Empresa</td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server" Width="238px"></asp:TextBox>
+                <asp:TextBox ID="TextBox4" runat="server" Width="238px" OnTextChanged="TextBox4_TextChanged"></asp:TextBox>
             </td>
         </tr>
         <tr>

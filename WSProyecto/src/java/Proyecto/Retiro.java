@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 public class Retiro {
     
  Conexion conexion;
- int sal,total=0,total2=0,sal2;
+ int sal,total=0,total2=0,tipo2=0,sal2;
  String tipo="";
     public Retiro(){
         conexion=new Conexion();
@@ -31,7 +31,8 @@ public class Retiro {
             if(rs.next()){
                tipo=rs.getString(3);
                sal=(rs.getInt(2));
-               if(sal>retiro&&tipo.equalsIgnoreCase("activo")){
+               tipo2=rs.getInt(5);
+               if(sal>retiro&&tipo.equalsIgnoreCase("activo")&&tipo2!=3){
             total=sal-retiro;
             respuesta="Transaccion Realizada" ;
             }
@@ -49,6 +50,7 @@ public class Retiro {
             Connection accesodb=conexion.getConexion();
             if(tipo.equalsIgnoreCase("activo")){
                 PreparedStatement pd = accesodb.prepareStatement("update cuenta SET saldo=? where nocuenta=?");
+            if(tipo2!=3){
             pd.setInt(1, total);
             pd.setInt(2, Integer.parseInt(cui));
             int i= pd.executeUpdate();
@@ -59,6 +61,7 @@ public class Retiro {
             }
             } else{
                 respuesta="Transaccion no posible";
+            }
             }
             }catch(Exception ex){
                 
@@ -102,6 +105,25 @@ public class Retiro {
             }
             return respuesta;
             }
+public String historial(int nocuenta,String descripcion,int monto,String fecha){
+        String respuesta=null;
+        Connection accesoDB = conexion.getConexion();
+        
+        try{
+            PreparedStatement ps = accesoDB.prepareStatement("insert into estadohistorial(nocuenta,descripcion,monto,fecha) values (?,?,?,?)");
+            ps.setInt(1, nocuenta);
+            ps.setString(2,descripcion);
+            ps.setInt(3,monto);
+            ps.setString(4,fecha);
+            int rs = ps.executeUpdate();
             
+            if(rs>0){
+                respuesta="Registro exitoso.";
+            }
+        }catch(Exception e){
+            System.out.println("Registro no ingresado");
+        }
+        return  respuesta;
+}
 }
         

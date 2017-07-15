@@ -20,6 +20,13 @@
         </td>
     </tr>
     <tr>
+        <td style="width: 373px; height: 26px;"></td>
+        <td style="width: 164px; height: 26px;">Fecha</td>
+        <td style="height: 26px">
+            <asp:TextBox ID="TextBox3" runat="server" Width="356px"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
         <td style="width: 373px">&nbsp;</td>
         <td style="width: 164px">
             <asp:Label ID="Label1" runat="server"></asp:Label>

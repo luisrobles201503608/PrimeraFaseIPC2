@@ -17,7 +17,7 @@ namespace Banquetzal
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string r = refe.Retirar(TextBox1.Text, int.Parse(TextBox2.Text.Trim()));
+            string r = refe.Retirar(TextBox1.Text, int.Parse(TextBox2.Text.Trim()),TextBox3.Text);
             TextBox1.Text = "";
             TextBox2.Text = "";
             Label1.Text = r;

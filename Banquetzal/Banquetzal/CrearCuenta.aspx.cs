@@ -17,7 +17,7 @@ namespace Banquetzal
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string r = refe.CrearCuenta(int.Parse(TextBox1.Text.Trim()), int.Parse(TextBox2.Text.Trim()), TextBox3.Text, TextBox4.Text,int.Parse(TextBox5.Text.Trim()));
+            string r = refe.CrearCuenta(int.Parse(TextBox1.Text.Trim()), int.Parse(TextBox2.Text.Trim()), TextBox3.Text, TextBox6.Text ,TextBox4.Text,int.Parse(TextBox5.Text.Trim()));
             TextBox1.Text = "";
             TextBox2.Text = "";
             TextBox3.Text = "";

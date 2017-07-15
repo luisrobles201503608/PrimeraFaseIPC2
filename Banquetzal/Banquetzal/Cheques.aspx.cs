@@ -17,7 +17,7 @@ namespace Banquetzal
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            refe.Cheque(int.Parse(TextBox1.Text),TextBox2.Text,int.Parse(TextBox3.Text),TextBox4.Text,int.Parse(TextBox5.Text),TextBox6.Text);
+            refe.Cheque(int.Parse(TextBox1.Text),TextBox2.Text,int.Parse(TextBox3.Text),TextBox4.Text,int.Parse(TextBox5.Text),TextBox6.Text,TextBox7.Text);
         }
     }
 }

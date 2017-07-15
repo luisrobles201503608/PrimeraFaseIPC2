@@ -37,8 +37,10 @@ $(function() {
                             <li><a href="EstadoCuenta.aspx">Estado</a></li>
                             <li><a href="Prestamo.aspx">Prestamo</a></li>
                             <li><a href="Depositos.aspx">Depositar</a></li>
-                            <li><a href="#">Transferencia</a></li>
-                            <li><a href="#">Transferencia a Terceros</a></li>
+                            <li><a href="AsignarANomina.aspx">Depositar</a></li>
+                             <li><a href="ReportePuntos.aspx">Puntos</a></li>
+                             <li><a href="CanjearPremios.aspx">Canjear Premios</a></li>
+                            <li><a href="DepositarAOCuentas.aspx">Transferencia a Terceros</a></li>
                         </ul>
               </li>
         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<i class="icon-angle-down"></i></a>

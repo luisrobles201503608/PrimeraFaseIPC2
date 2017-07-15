@@ -21,6 +21,13 @@
         </tr>
         <tr>
             <td style="width: 513px">&nbsp;</td>
+            <td style="width: 140px">Fecha</td>
+            <td>
+                <asp:TextBox ID="TextBox3" runat="server" Width="247px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 513px">&nbsp;</td>
             <td style="width: 140px">&nbsp;</td>
             <td>
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Registrar" />

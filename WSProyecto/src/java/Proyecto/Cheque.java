@@ -15,7 +15,7 @@ import java.sql.ResultSet;
  */
 public class Cheque {
      Conexion conexion;
-     int sal,total=0,total2=0,sal2;
+     int sal,total=0,total2=0,sal2,sal3,total3=0;
   String tipo="";
     public Cheque(){
         conexion=new Conexion();
@@ -112,6 +112,63 @@ public class Cheque {
                 PreparedStatement pd = accesodb.prepareStatement("update estadocuenta SET Deposito=? where cuenta_nocuenta=?");
             pd.setInt(1, total2);
             pd.setInt(2, cui);
+            int i= pd.executeUpdate();
+            if(i>0){
+               respuesta="Accion Realizada" ;
+            }else{
+                respuesta="datos no encontrados";
+            }
+            }catch(Exception ex){
+                
+            }
+            return respuesta;
+            }
+    public String historial(int nocuenta,String descripcion,int monto,String fecha){
+        String respuesta=null;
+        Connection accesoDB = conexion.getConexion();
+        
+        try{
+            PreparedStatement ps = accesoDB.prepareStatement("insert into estadohistorial(nocuenta,descripcion,monto,fecha) values (?,?,?,?)");
+            ps.setInt(1, nocuenta);
+            ps.setString(2,descripcion);
+            ps.setInt(3,monto);
+            ps.setString(4,fecha);
+            int rs = ps.executeUpdate();
+            
+            if(rs>0){
+                respuesta="Registro exitoso.";
+            }
+        }catch(Exception e){
+            System.out.println("Registro no ingresado");
+        }
+        return  respuesta;
+}
+    public String Puntos1(String nocuenta,int retiro){
+        String respuesta=null;
+        try{
+            Connection accesodb=conexion.getConexion();
+            PreparedStatement ps=accesodb.prepareStatement("select * from estadocuenta where cuenta_nocuenta=?");
+            ps.setInt(1, Integer.parseInt(nocuenta));
+            ResultSet rs=ps.executeQuery();
+            if(rs.next()&&retiro>=500){
+               sal3=(rs.getInt(5));
+            total3=sal3+1500;
+            respuesta="Transaccion Realizada" ;
+            }else{
+                respuesta="datos no obtenidos";
+            }
+        }catch(Exception ex){
+            respuesta=ex.toString();
+        }
+        return respuesta;
+    }
+    public String Puntos2(String cui, int retiro){
+        String respuesta=null;    
+        try{
+            Connection accesodb=conexion.getConexion();
+                PreparedStatement pd = accesodb.prepareStatement("update estadocuenta SET puntosacumulados=? where cuenta_nocuenta=?");
+            pd.setInt(1, total3);
+            pd.setInt(2, Integer.parseInt(cui));
             int i= pd.executeUpdate();
             if(i>0){
                respuesta="Accion Realizada" ;

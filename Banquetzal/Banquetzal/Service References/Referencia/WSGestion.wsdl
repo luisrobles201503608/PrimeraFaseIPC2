@@ -5,29 +5,89 @@
       <xsd:import schemaLocation="http://localhost:8080/WSProyecto/WSGestion?xsd=1" namespace="http://Proyecto/" />
     </xsd:schema>
   </types>
-  <message name="Prestamo">
-    <part name="parameters" element="tns:Prestamo" />
+  <message name="ObtenerPremios">
+    <part name="parameters" element="tns:ObtenerPremios" />
   </message>
-  <message name="PrestamoResponse">
-    <part name="parameters" element="tns:PrestamoResponse" />
+  <message name="ObtenerPremiosResponse">
+    <part name="parameters" element="tns:ObtenerPremiosResponse" />
   </message>
-  <message name="Depositar">
-    <part name="parameters" element="tns:Depositar" />
+  <message name="InsertarEmpresa">
+    <part name="parameters" element="tns:InsertarEmpresa" />
   </message>
-  <message name="DepositarResponse">
-    <part name="parameters" element="tns:DepositarResponse" />
+  <message name="InsertarEmpresaResponse">
+    <part name="parameters" element="tns:InsertarEmpresaResponse" />
   </message>
-  <message name="Retirar">
-    <part name="parameters" element="tns:Retirar" />
+  <message name="InsertarAgencia">
+    <part name="parameters" element="tns:InsertarAgencia" />
   </message>
-  <message name="RetirarResponse">
-    <part name="parameters" element="tns:RetirarResponse" />
+  <message name="InsertarAgenciaResponse">
+    <part name="parameters" element="tns:InsertarAgenciaResponse" />
   </message>
-  <message name="Login">
-    <part name="parameters" element="tns:Login" />
+  <message name="RegistrarUsuarioIndi">
+    <part name="parameters" element="tns:RegistrarUsuarioIndi" />
   </message>
-  <message name="LoginResponse">
-    <part name="parameters" element="tns:LoginResponse" />
+  <message name="RegistrarUsuarioIndiResponse">
+    <part name="parameters" element="tns:RegistrarUsuarioIndiResponse" />
+  </message>
+  <message name="RegistrarTrabajador">
+    <part name="parameters" element="tns:RegistrarTrabajador" />
+  </message>
+  <message name="RegistrarTrabajadorResponse">
+    <part name="parameters" element="tns:RegistrarTrabajadorResponse" />
+  </message>
+  <message name="DepositoTerceros">
+    <part name="parameters" element="tns:DepositoTerceros" />
+  </message>
+  <message name="DepositoTercerosResponse">
+    <part name="parameters" element="tns:DepositoTercerosResponse" />
+  </message>
+  <message name="CambiarContraEmp">
+    <part name="parameters" element="tns:CambiarContraEmp" />
+  </message>
+  <message name="CambiarContraEmpResponse">
+    <part name="parameters" element="tns:CambiarContraEmpResponse" />
+  </message>
+  <message name="CambiarContraIndi">
+    <part name="parameters" element="tns:CambiarContraIndi" />
+  </message>
+  <message name="CambiarContraIndiResponse">
+    <part name="parameters" element="tns:CambiarContraIndiResponse" />
+  </message>
+  <message name="EstadoCDeposito">
+    <part name="parameters" element="tns:EstadoCDeposito" />
+  </message>
+  <message name="EstadoCDepositoResponse">
+    <part name="parameters" element="tns:EstadoCDepositoResponse" />
+  </message>
+  <message name="RegistrarProveedor">
+    <part name="parameters" element="tns:RegistrarProveedor" />
+  </message>
+  <message name="RegistrarProveedorResponse">
+    <part name="parameters" element="tns:RegistrarProveedorResponse" />
+  </message>
+  <message name="RegistrarPremio">
+    <part name="parameters" element="tns:RegistrarPremio" />
+  </message>
+  <message name="RegistrarPremioResponse">
+    <part name="parameters" element="tns:RegistrarPremioResponse" />
+  </message>
+  <message name="SolicitudProveedores">
+    <part name="parameters" element="tns:SolicitudProveedores" />
+  </message>
+  <message name="SolicitudProveedoresResponse">
+    <part name="parameters" element="tns:SolicitudProveedoresResponse" />
+  </message>
+  <message name="CambiarContraNomi">
+    <part name="parameters" element="tns:CambiarContraNomi" />
+  </message>
+  <message name="CambiarContraNomiResponse">
+    <part name="parameters" element="tns:CambiarContraNomiResponse" />
+  </message>
+  <message name="ReportePuntos">
+    <part name="parameters" element="tns:ReportePuntos" />
+  </message>
+  <message name="ReportePuntosResponse">
+    <part name="parameters" element="tns:ReportePuntosResponse" />
   </message>
   <message name="LogEmpleado">
     <part name="parameters" element="tns:LogEmpleado" />
@@ -41,11 +101,23 @@
   <message name="AsignarANominResponse">
     <part name="parameters" element="tns:AsignarANominResponse" />
   </message>
-  <message name="LogEmpresa">
-    <part name="parameters" element="tns:LogEmpresa" />
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
   </message>
-  <message name="LogEmpresaResponse">
-    <part name="parameters" element="tns:LogEmpresaResponse" />
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="Retirar">
+    <part name="parameters" element="tns:Retirar" />
+  </message>
+  <message name="RetirarResponse">
+    <part name="parameters" element="tns:RetirarResponse" />
+  </message>
+  <message name="Prestamo">
+    <part name="parameters" element="tns:Prestamo" />
+  </message>
+  <message name="PrestamoResponse">
+    <part name="parameters" element="tns:PrestamoResponse" />
   </message>
   <message name="CrearCuenta">
     <part name="parameters" element="tns:CrearCuenta" />
@@ -53,47 +125,11 @@
   <message name="CrearCuentaResponse">
     <part name="parameters" element="tns:CrearCuentaResponse" />
   </message>
-  <message name="RegistrarTrabajador">
-    <part name="parameters" element="tns:RegistrarTrabajador" />
+  <message name="LogEmpresa">
+    <part name="parameters" element="tns:LogEmpresa" />
   </message>
-  <message name="RegistrarTrabajadorResponse">
-    <part name="parameters" element="tns:RegistrarTrabajadorResponse" />
-  </message>
-  <message name="InsertarAgencia">
-    <part name="parameters" element="tns:InsertarAgencia" />
-  </message>
-  <message name="InsertarAgenciaResponse">
-    <part name="parameters" element="tns:InsertarAgenciaResponse" />
-  </message>
-  <message name="CambiarContraIndi">
-    <part name="parameters" element="tns:CambiarContraIndi" />
-  </message>
-  <message name="CambiarContraIndiResponse">
-    <part name="parameters" element="tns:CambiarContraIndiResponse" />
-  </message>
-  <message name="InsertarEmpresa">
-    <part name="parameters" element="tns:InsertarEmpresa" />
-  </message>
-  <message name="InsertarEmpresaResponse">
-    <part name="parameters" element="tns:InsertarEmpresaResponse" />
-  </message>
-  <message name="CambiarContraNomi">
-    <part name="parameters" element="tns:CambiarContraNomi" />
-  </message>
-  <message name="CambiarContraNomiResponse">
-    <part name="parameters" element="tns:CambiarContraNomiResponse" />
-  </message>
-  <message name="CambiarContraEmp">
-    <part name="parameters" element="tns:CambiarContraEmp" />
-  </message>
-  <message name="CambiarContraEmpResponse">
-    <part name="parameters" element="tns:CambiarContraEmpResponse" />
-  </message>
-  <message name="RegistrarUsuarioIndi">
-    <part name="parameters" element="tns:RegistrarUsuarioIndi" />
-  </message>
-  <message name="RegistrarUsuarioIndiResponse">
-    <part name="parameters" element="tns:RegistrarUsuarioIndiResponse" />
+  <message name="LogEmpresaResponse">
+    <part name="parameters" element="tns:LogEmpresaResponse" />
   </message>
   <message name="CrearChequera">
     <part name="parameters" element="tns:CrearChequera" />
@@ -101,17 +137,17 @@
   <message name="CrearChequeraResponse">
     <part name="parameters" element="tns:CrearChequeraResponse" />
   </message>
-  <message name="EstadoCDeposito">
-    <part name="parameters" element="tns:EstadoCDeposito" />
-  </message>
-  <message name="EstadoCDepositoResponse">
-    <part name="parameters" element="tns:EstadoCDepositoResponse" />
-  </message>
   <message name="Cheque">
     <part name="parameters" element="tns:Cheque" />
   </message>
   <message name="ChequeResponse">
     <part name="parameters" element="tns:ChequeResponse" />
+  </message>
+  <message name="Depositar">
+    <part name="parameters" element="tns:Depositar" />
+  </message>
+  <message name="DepositarResponse">
+    <part name="parameters" element="tns:DepositarResponse" />
   </message>
   <message name="EstadoCRetiro">
     <part name="parameters" element="tns:EstadoCRetiro" />
@@ -119,22 +155,68 @@
   <message name="EstadoCRetiroResponse">
     <part name="parameters" element="tns:EstadoCRetiroResponse" />
   </message>
+  <message name="ComprarProducto">
+    <part name="parameters" element="tns:ComprarProducto" />
+  </message>
+  <message name="ComprarProductoResponse">
+    <part name="parameters" element="tns:ComprarProductoResponse" />
+  </message>
   <portType name="WSGestionCIndividual">
-    <operation name="Prestamo">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/PrestamoRequest" message="tns:Prestamo" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/PrestamoResponse" message="tns:PrestamoResponse" />
+    <operation name="ObtenerPremios">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/ObtenerPremiosRequest" message="tns:ObtenerPremios" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/ObtenerPremiosResponse" message="tns:ObtenerPremiosResponse" />
     </operation>
-    <operation name="Depositar">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/DepositarRequest" message="tns:Depositar" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/DepositarResponse" message="tns:DepositarResponse" />
+    <operation name="InsertarEmpresa">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/InsertarEmpresaRequest" message="tns:InsertarEmpresa" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/InsertarEmpresaResponse" message="tns:InsertarEmpresaResponse" />
     </operation>
-    <operation name="Retirar">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/RetirarRequest" message="tns:Retirar" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/RetirarResponse" message="tns:RetirarResponse" />
+    <operation name="InsertarAgencia">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/InsertarAgenciaRequest" message="tns:InsertarAgencia" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/InsertarAgenciaResponse" message="tns:InsertarAgenciaResponse" />
     </operation>
-    <operation name="Login">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/LoginRequest" message="tns:Login" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/LoginResponse" message="tns:LoginResponse" />
+    <operation name="RegistrarUsuarioIndi">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarUsuarioIndiRequest" message="tns:RegistrarUsuarioIndi" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarUsuarioIndiResponse" message="tns:RegistrarUsuarioIndiResponse" />
+    </operation>
+    <operation name="RegistrarTrabajador">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorRequest" message="tns:RegistrarTrabajador" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorResponse" message="tns:RegistrarTrabajadorResponse" />
+    </operation>
+    <operation name="DepositoTerceros">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/DepositoTercerosRequest" message="tns:DepositoTerceros" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/DepositoTercerosResponse" message="tns:DepositoTercerosResponse" />
+    </operation>
+    <operation name="CambiarContraEmp">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraEmpRequest" message="tns:CambiarContraEmp" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraEmpResponse" message="tns:CambiarContraEmpResponse" />
+    </operation>
+    <operation name="CambiarContraIndi">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraIndiRequest" message="tns:CambiarContraIndi" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraIndiResponse" message="tns:CambiarContraIndiResponse" />
+    </operation>
+    <operation name="EstadoCDeposito">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/EstadoCDepositoRequest" message="tns:EstadoCDeposito" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/EstadoCDepositoResponse" message="tns:EstadoCDepositoResponse" />
+    </operation>
+    <operation name="RegistrarProveedor">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarProveedorRequest" message="tns:RegistrarProveedor" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarProveedorResponse" message="tns:RegistrarProveedorResponse" />
+    </operation>
+    <operation name="RegistrarPremio">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarPremioRequest" message="tns:RegistrarPremio" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarPremioResponse" message="tns:RegistrarPremioResponse" />
+    </operation>
+    <operation name="SolicitudProveedores">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/SolicitudProveedoresRequest" message="tns:SolicitudProveedores" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/SolicitudProveedoresResponse" message="tns:SolicitudProveedoresResponse" />
+    </operation>
+    <operation name="CambiarContraNomi">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraNomiRequest" message="tns:CambiarContraNomi" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraNomiResponse" message="tns:CambiarContraNomiResponse" />
+    </operation>
+    <operation name="ReportePuntos">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/ReportePuntosRequest" message="tns:ReportePuntos" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/ReportePuntosResponse" message="tns:ReportePuntosResponse" />
     </operation>
     <operation name="LogEmpleado">
       <input wsam:Action="http://Proyecto/WSGestionCIndividual/LogEmpleadoRequest" message="tns:LogEmpleado" />
@@ -144,62 +226,50 @@
       <input wsam:Action="http://Proyecto/WSGestionCIndividual/AsignarANominRequest" message="tns:AsignarANomin" />
       <output wsam:Action="http://Proyecto/WSGestionCIndividual/AsignarANominResponse" message="tns:AsignarANominResponse" />
     </operation>
-    <operation name="LogEmpresa">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/LogEmpresaRequest" message="tns:LogEmpresa" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/LogEmpresaResponse" message="tns:LogEmpresaResponse" />
+    <operation name="Login">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+    <operation name="Retirar">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/RetirarRequest" message="tns:Retirar" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/RetirarResponse" message="tns:RetirarResponse" />
+    </operation>
+    <operation name="Prestamo">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/PrestamoRequest" message="tns:Prestamo" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/PrestamoResponse" message="tns:PrestamoResponse" />
     </operation>
     <operation name="CrearCuenta">
       <input wsam:Action="http://Proyecto/WSGestionCIndividual/CrearCuentaRequest" message="tns:CrearCuenta" />
       <output wsam:Action="http://Proyecto/WSGestionCIndividual/CrearCuentaResponse" message="tns:CrearCuentaResponse" />
     </operation>
-    <operation name="RegistrarTrabajador">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorRequest" message="tns:RegistrarTrabajador" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarTrabajadorResponse" message="tns:RegistrarTrabajadorResponse" />
-    </operation>
-    <operation name="InsertarAgencia">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/InsertarAgenciaRequest" message="tns:InsertarAgencia" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/InsertarAgenciaResponse" message="tns:InsertarAgenciaResponse" />
-    </operation>
-    <operation name="CambiarContraIndi">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraIndiRequest" message="tns:CambiarContraIndi" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraIndiResponse" message="tns:CambiarContraIndiResponse" />
-    </operation>
-    <operation name="InsertarEmpresa">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/InsertarEmpresaRequest" message="tns:InsertarEmpresa" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/InsertarEmpresaResponse" message="tns:InsertarEmpresaResponse" />
-    </operation>
-    <operation name="CambiarContraNomi">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraNomiRequest" message="tns:CambiarContraNomi" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraNomiResponse" message="tns:CambiarContraNomiResponse" />
-    </operation>
-    <operation name="CambiarContraEmp">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraEmpRequest" message="tns:CambiarContraEmp" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/CambiarContraEmpResponse" message="tns:CambiarContraEmpResponse" />
-    </operation>
-    <operation name="RegistrarUsuarioIndi">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarUsuarioIndiRequest" message="tns:RegistrarUsuarioIndi" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/RegistrarUsuarioIndiResponse" message="tns:RegistrarUsuarioIndiResponse" />
+    <operation name="LogEmpresa">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/LogEmpresaRequest" message="tns:LogEmpresa" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/LogEmpresaResponse" message="tns:LogEmpresaResponse" />
     </operation>
     <operation name="CrearChequera">
       <input wsam:Action="http://Proyecto/WSGestionCIndividual/CrearChequeraRequest" message="tns:CrearChequera" />
       <output wsam:Action="http://Proyecto/WSGestionCIndividual/CrearChequeraResponse" message="tns:CrearChequeraResponse" />
     </operation>
-    <operation name="EstadoCDeposito">
-      <input wsam:Action="http://Proyecto/WSGestionCIndividual/EstadoCDepositoRequest" message="tns:EstadoCDeposito" />
-      <output wsam:Action="http://Proyecto/WSGestionCIndividual/EstadoCDepositoResponse" message="tns:EstadoCDepositoResponse" />
-    </operation>
     <operation name="Cheque">
       <input wsam:Action="http://Proyecto/WSGestionCIndividual/ChequeRequest" message="tns:Cheque" />
       <output wsam:Action="http://Proyecto/WSGestionCIndividual/ChequeResponse" message="tns:ChequeResponse" />
+    </operation>
+    <operation name="Depositar">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/DepositarRequest" message="tns:Depositar" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/DepositarResponse" message="tns:DepositarResponse" />
     </operation>
     <operation name="EstadoCRetiro">
       <input wsam:Action="http://Proyecto/WSGestionCIndividual/EstadoCRetiroRequest" message="tns:EstadoCRetiro" />
       <output wsam:Action="http://Proyecto/WSGestionCIndividual/EstadoCRetiroResponse" message="tns:EstadoCRetiroResponse" />
     </operation>
+    <operation name="ComprarProducto">
+      <input wsam:Action="http://Proyecto/WSGestionCIndividual/ComprarProductoRequest" message="tns:ComprarProducto" />
+      <output wsam:Action="http://Proyecto/WSGestionCIndividual/ComprarProductoResponse" message="tns:ComprarProductoResponse" />
+    </operation>
   </portType>
   <binding name="WSGestionCIndividualPortBinding" type="tns:WSGestionCIndividual">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="Prestamo">
+    <operation name="ObtenerPremios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -208,7 +278,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Depositar">
+    <operation name="InsertarEmpresa">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -217,7 +287,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Retirar">
+    <operation name="InsertarAgencia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -226,7 +296,97 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="Login">
+    <operation name="RegistrarUsuarioIndi">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarTrabajador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DepositoTerceros">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CambiarContraEmp">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CambiarContraIndi">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EstadoCDeposito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarPremio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SolicitudProveedores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CambiarContraNomi">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ReportePuntos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -253,7 +413,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="LogEmpresa">
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Retirar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Prestamo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -271,61 +449,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="RegistrarTrabajador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="InsertarAgencia">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CambiarContraIndi">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="InsertarEmpresa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CambiarContraNomi">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="CambiarContraEmp">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="RegistrarUsuarioIndi">
+    <operation name="LogEmpresa">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -343,15 +467,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="EstadoCDeposito">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="Cheque">
       <soap:operation soapAction="" />
       <input>
@@ -361,7 +476,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="Depositar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="EstadoCRetiro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ComprarProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

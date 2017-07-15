@@ -17,7 +17,7 @@ namespace Banquetzal
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            refe.CrearChequera(TextBox1.Text,int.Parse(TextBox2.Text));
+            refe.CrearChequera(TextBox1.Text,int.Parse(TextBox2.Text),TextBox3.Text);
         }
     }
 }

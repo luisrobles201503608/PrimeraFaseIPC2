@@ -17,12 +17,17 @@ namespace Banquetzal
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string r = refe.AsignarANomin(int.Parse(TextBox1.Text.Trim()), int.Parse(TextBox2.Text.Trim()), TextBox3.Text, int.Parse(TextBox4.Text.Trim()));
+            string r = refe.AsignarANomin(int.Parse(TextBox1.Text.Trim()), int.Parse(TextBox2.Text.Trim()), TextBox4.Text,int.Parse(TextBox3.Text));
             TextBox1.Text = "";
             TextBox2.Text = "";
             TextBox3.Text = "";
             TextBox4.Text = "";
             Label1.Text = r;
+        }
+
+        protected void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
